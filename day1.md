@@ -1,4 +1,4 @@
-## 🎉 Day 1: Introduction to Java 🎉
+# 🎉 Day 1: Introduction to Java 🎉
 
 ## 📚 Course Overview
 
