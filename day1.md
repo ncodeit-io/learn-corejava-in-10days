@@ -167,7 +167,8 @@ Java is an object-oriented programming language, which means that you can create
 
 This is just the beginning of what you can do with Java syntax. Keep practicing and learning, and you'll soon be creating amazing Java applications!
 
-🚀 Applications of Java relevant to Day 1
+## 🚀 Applications of Java relevant to Day 1
+
 Java is a versatile programming language that has a wide range of applications. Here are some applications of Java that are relevant to the Day 1 topics:
 
 📝 Writing and Running Java Programs
