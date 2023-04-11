@@ -118,3 +118,100 @@ Java has had a significant impact on the software industry, and the language is 
     -   c) Java Data Binding 🧬
     -   d) Java Database Connectivity 📊
         Answer: D. Java Database Connectivity 📊
+        
+        ## Data Types and Operators in Java 🚀
+
+# Data Types in Java 📊
+
+Data types in Java are used to define the type of data that can be stored in a variable. Java has two types of data types: Primitive data types and Reference data types.
+
+1.  Primitive Data Types 🧰 Java has eight primitive data types: byte, short, int, long, float, double, char, and boolean. These data types are used to represent the most basic types of data in Java.
+    
+2.  Reference Data Types 🗂️ Java has four reference data types: Class, Interface, Array, and String. Reference data types are used to represent more complex data structures.
+    
+
+### Operators in Java 🎯
+
+Operators in Java are symbols that are used to perform operations on variables and values. Java has several types of operators, including arithmetic, relational, logical, bitwise, assignment, and conditional operators.
+
+1.  Arithmetic Operators ➕➖✖️➗ Arithmetic operators are used to perform arithmetic operations such as addition, subtraction, multiplication, division, and modulus.
+    
+2.  Relational Operators ➡️<br>➡️= Relational operators are used to compare two values or variables. The result of the comparison is a boolean value (true or false).
+    
+3.  Logical Operators 🔢👨‍👩‍👧‍👦 Logical operators are used to combine two or more boolean expressions and evaluate the resulting expression as true or false.
+    
+4.  Bitwise Operators 🔢🤖 Bitwise operators are used to perform bit-level operations on variables.
+    
+5.  Assignment Operators 👈🔢 Assignment operators are used to assign a value to a variable.
+    
+6.  Conditional Operators ❓🤔❗ Conditional operators are used to evaluate two expressions and return the result of the first expression if it is true, or the result of the second expression if it is false.
+![](https://i.gyazo.com/16086c8183a31997e41ecdd0fe9f929d.png)  ![](https://i.gyazo.com/63eeb0a305471a4dcc4b79a48189ee80.png)
+## Primitive data types
+🔢🌟Primitive data types are the building blocks of Java programming. There are eight primitive data types that represent simple values. Let's take a look at them:
+
+👉 **byte:** This data type is an 8-bit signed two's complement integer. It can be represented using 🍫 chocolate bars from -128 to 127.
+
+👉 **short:** This data type is a 16-bit signed two's complement integer. It can be represented using 📏 rulers from -32,768 to 32,767.
+
+👉 **int:** This data type is a 32-bit signed two's complement integer. It can be represented using 🎲 dice from -2,147,483,648 to 2,147,483,647.
+
+👉 **long:** This data type is a 64-bit signed two's complement integer. It can be represented using 🌎 globes from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+
+👉 **float:** This data type is a single-precision 32-bit floating point. It can be represented using 🧊 ice cubes from 1.4e-45 to 3.4028235e+38.
+
+👉 **double:** This data type is a double-precision 64-bit floating point. It can be represented using 🔬 microscopes from 4.9e-324 to 1.7976931348623157e+308.
+
+👉 **char:** This data type is a 16-bit Unicode character. It can be represented using 🔤 alphabets from '\u0000' (or 0) to '\uffff' (or 65,535).
+
+👉 **boolean:** This data type represents a boolean value, which can be either true or false. It can be represented using ☑️ checkmarks for true and ❌ X marks for false.
+
+![](https://i.gyazo.com/fb50085eea5375d43cc0093d1af15229.png)
+| Data Type | Description                                     | Range                                                   | Example Representation |
+| --------- | ----------------------------------------------- | ------------------------------------------------------- | ---------------------- |
+| byte      | 8-bit signed two’s complement integer           | -128 to 127                                             | 🍫 chocolate bars      |
+| short     | 16-bit signed two’s complement integer          | -32,768 to 32,767                                       | 📏 rulers              |
+| int       | 32-bit signed two’s complement integer          | -2,147,483,648 to 2,147,483,647                         | 🎲 dice                |
+| long      | 64-bit signed two’s complement integer          | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 🌎 globes              |
+| float     | 32-bit floating point number                    | 1.4e-45 to 3.4028235e+38                                | 🧊 ice cubes           |
+| double    | 64-bit floating point number                    | 4.9e-324 to 1.7976931348623157e+308                     | 🔬 microscopes         |
+| char      | 16-bit Unicode character                         | ‘\u0000’ (or 0) to ‘\uffff’ (or 65,535)                 | 🔤 alphabets           |
+| boolean   | represents a boolean value, true or false        | true or false                                           | ☑️ checkmarks or ❌ X marks |
+
+## Byte
+
+Byte is one of the eight primitive data types in Java. It is an 8-bit signed two's complement integer, which means it can represent values from -128 to 127. 🔢
+
+In Java, bytes are often used when dealing with binary data, such as reading and writing files or communicating with hardware devices. 💾
+
+Here are three examples of how bytes can be used in Java:
+
+### Example 1: Storing a byte value in a variable
+**Java code:**
+![](https://i.gyazo.com/af547651caece6c96b542b99c37c0659.png)
+
+**Output:**
+**`10`** 
+
+In this example, we declare a variable named `myByte` and assign it a value of 10. 
+We then print the value of `myByte` using the `System.out.println()` method. 📝
+
+### Example 2: Reading bytes from a file
+
+**Java code:**
+![](https://i.gyazo.com/75e4d1031624457cff9ca2b51988c885.png)
+
+**Output:**
+**`72 101 108 108 111 32 87 111 114 108 100`** 
+
+In this example, we read bytes from a file named "file.txt" using the `FileInputStream` class. We use a while loop to read each byte until we reach the end of the file (which is indicated by a value of -1). We then print each byte value to the console. 📁
+
+### Example 3: Converting a byte array to a string
+**Java code:**
+![](https://i.gyazo.com/6a69d2ed4bbf237a324b03459d065ec6.png)
+
+**Output:**
+**`Hello`** 
+
+In this example, we declare a byte array containing the ASCII values for the letters "Hello". We then create a new `String` object using the byte array, and print the resulting string to the console. 💬
+
+Overall, bytes are useful for storing small integers and dealing with binary data in Java. 👍
