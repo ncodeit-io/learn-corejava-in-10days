@@ -1,1 +1,241 @@
+Lesson1	-  Introduction to Java
+	- ElementA - concept1 	- History of Java
+		- elementB - Explanation of concept     - History of Java 
+		- elementC - Example of concept		- na
+		- elementD - Where it is used		- na
+		- elementE - sample code		- na
+		- elementF - image			- relevant images of java
+		- elementG - summary			- na
+		- elementH - interview questions	- knowledge check about the java history
+	- ElementA - concept2 - Installation of JDK and IDEs	
+		- elementB - Explanation of concept     - Installation of JDK and IDEs
+		- elementC - Example of concept		- na
+		- elementD - Where it is used		- Applications of Installation of JDK and IDEs
+		- elementE - sample code		- na
+		- elementF - image			- relevant images of JDK & IDEs
+		- elementG - summary			- summary of Installation of JDK and IDEs
+		- elementH - interview questions	- knowledge check about the Installation of JDK and IDEs
+	- ElementA - concept3 	- Hello world program
+		- elementB - Explanation of concept     - Basic java program-hello world
+		- elementC - Example of concept		- hello world examples
+		- elementD - Where it is used		- Applications of basic java program
+		- elementE - sample code		- java code for Hello world
+		- elementF - image			- relevant images of Hello world
+		- elementG - summary			- summary hello world program
+		- elementH - interview questions	- knowledge check about Hello world Java program
+	- ElementA - concept4 - Introduction to Java syntax	
+		- elementB - Explanation of concept     - Java syntax
+		- elementC - Example of concept		- Java syntax
+		- elementD - Where it is used		- Applications of Java syntax
+		- elementE - sample code		- Java syntax codes
+		- elementF - image			- relevant images of Java syntax
+		- elementG - summary			- summary of Java syntax
+		- elementH - interview questions	- knowledge check about Java syntax
+
+Lesson2	-  Data Types and Operators
+	- ElementA - concept1 	- Primitive Data Types
+		- elementB - Explanation of concept     - Primitive Data Types
+		- elementC - Example of concept		- Primitive Data Types
+		- elementD - Where it is used		- Applications of Primitive Data Types
+		- elementE - sample code		- Java code for Primitive Data Types
+		- elementF - image			- relevant images of Primitive Data Types
+		- elementG - summary			- summary of Primitive Data Types
+		- elementH - interview questions	- knowledge check about the Primitive Data Types
+	- ElementA - concept2 - Variables
+		- elementB - Explanation of concept     - Variables
+		- elementC - Example of concept		- Variables
+		- elementD - Where it is used		- Applications of Variables
+		- elementE - sample code		- java codes for Variables
+		- elementF - image			- relevant images of Variables
+		- elementG - summary			- summary of Variables
+		- elementH - interview questions	- knowledge check about the Variables
+	- ElementA - concept3 	- Operators
+		- elementB - Explanation of concept     - Arithmetic and logical operators
+		- elementC - Example of concept		- Arithmetic and logical operators examples
+		- elementD - Where it is used		- Applications of Arithmetic and logical operators
+		- elementE - sample code		- java code for Arithmetic and logical operators
+		- elementF - image			- relevant images of Arithmetic and logical operators
+		- elementG - summary			- summary of operators
+		- elementH - interview questions	- knowledge check about operators
+	- ElementA - concept4 	- Conditional statements
+		- elementB - Explanation of concept     - Conditional statements
+		- elementC - Example of concept		- Conditional statements examples
+		- elementD - Where it is used		- Applications of Conditional statements
+		- elementE - sample code		- java code for Conditional statements
+		- elementF - image			- relevant images of Conditional statements
+		- elementG - summary			- summary of Conditional statements
+		- elementH - interview questions	- knowledge check about Conditional statements
+Lesson3	-  Control Statements
+	- ElementA - concept1 	- If-else statements
+		- elementB - Explanation of concept     - If-else statements
+		- elementC - Example of concept		- If-else statements
+		- elementD - Where it is used		- Applications of If-else statements
+		- elementE - sample code		- java codes for If-else statements
+		- elementF - image			- relevant images of If-else statements
+		- elementG - summary			- summary of If-else statements
+		- elementH - interview questions	- knowledge check about the If-else statements
+	- ElementA - concept2 - Loops
+		- elementB - Explanation of concept     - Loops
+		- elementC - Example of concept		- Loops
+		- elementD - Where it is used		- Applications of Loops
+		- elementE - sample code		- java codes for Loops
+		- elementF - image			- relevant images of Loops
+		- elementG - summary			- summary of Loops
+		- elementH - interview questions	- knowledge check about the Loops
+Lesson4	-  Arrays and Methods
+	- ElementA - concept1 	- Arrays
+		- elementB - Explanation of concept     - Arrays
+		- elementC - Example of concept		- Arrays
+		- elementD - Where it is used		- Applications of Arrays
+		- elementE - sample code		- java codes for Arrays
+		- elementF - image			- relevant images of Arrays
+		- elementG - summary			- summary of Arrays
+		- elementH - interview questions	- knowledge check about the Arrays
+	- ElementA - concept2 - Methods
+		- elementB - Explanation of concept     - Methods
+		- elementC - Example of concept		- Methods
+		- elementD - Where it is used		- Applications of Methods
+		- elementE - sample code		- java codes for Methods
+		- elementF - image			- relevant images of Methods
+		- elementG - summary			- summary of Methods
+		- elementH - interview questions	- knowledge check about the Methods
+Lesson5	-  Object-Oriented Programming (OOP) Concepts
+	- ElementA - concept1 	- Classes and Objects
+		- elementB - Explanation of concept     - Classes and Objects
+		- elementC - Example of concept		- Classes and Objects
+		- elementD - Where it is used		- Applications of Classes and Objects
+		- elementE - sample code		- java codes for Classes and Objects
+		- elementF - image			- relevant images of Classes and Objects
+		- elementG - summary			- summary of Classes and Objects
+		- elementH - interview questions	- knowledge check about the Classes and Objects
+	- ElementA - concept2 - Inheritance
+		- elementB - Explanation of concept     - Inheritance
+		- elementC - Example of concept		- Inheritance
+		- elementD - Where it is used		- Applications of Inheritance
+		- elementE - sample code		- java codes for Inheritance
+		- elementF - image			- relevant images of Inheritance
+		- elementG - summary			- summary of Inheritance
+		- elementH - interview questions	- knowledge check about the Inheritance
+	- ElementA - concept3 	- Polymorphism
+		- elementB - Explanation of concept     - Polymorphism
+		- elementC - Example of concept		- Polymorphism
+		- elementD - Where it is used		- Applications of Polymorphism
+		- elementE - sample code		- java code for Polymorphism
+		- elementF - image			- relevant images of Polymorphism
+		- elementG - summary			- summary of Polymorphism
+		- elementH - interview questions	- knowledge check about Polymorphism
+Lesson6	-  Exception Handling
+	- ElementA - concept1 	- Types of Exceptions
+		- elementB - Explanation of concept     - Types of Exceptions
+		- elementC - Example of concept		- Types of Exceptions
+		- elementD - Where it is used		- Applications of Types of Exceptions
+		- elementE - sample code		- java codes for Types of Exceptions
+		- elementF - image			- relevant images of Types of Exceptions
+		- elementG - summary			- summary of Types of Exceptions
+		- elementH - interview questions	- knowledge check about the Types of Exceptions
+	- ElementA - concept2 - Handling Exceptions
+		- elementB - Explanation of concept     - Handling Exceptions
+		- elementC - Example of concept		- Handling Exceptions
+		- elementD - Where it is used		- Applications of Handling Exceptions
+		- elementE - sample code		- java codes for Handling Exceptions
+		- elementF - image			- relevant images of Handling Exceptions
+		- elementG - summary			- summary of Handling Exceptions
+		- elementH - interview questions	- knowledge check about Handling Exceptions
+Lesson7	-  Input and Output Operations
+	- ElementA - concept1 	- File I/O
+		- elementB - Explanation of concept     - File I/O
+		- elementC - Example of concept		- File I/O
+		- elementD - Where it is used		- Applications of File I/O
+		- elementE - sample code		- java codes for File I/O
+		- elementF - image			- relevant images of File I/O
+		- elementG - summary			- summary of File I/O
+		- elementH - interview questions	- knowledge check about the File I/O
+	- ElementA - concept2 - Console I/O
+		- elementB - Explanation of concept     - Console I/O
+		- elementC - Example of concept		- Console I/O
+		- elementD - Where it is used		- Applications of Console I/O
+		- elementE - sample code		- java codes for Console I/O
+		- elementF - image			- relevant images of Console I/O
+		- elementG - summary			- summary of Console I/O
+		- elementH - interview questions	- knowledge check about the Console I/O
+Lesson8	-  Collection Framework
+	- ElementA - concept1 	- Collections
+		- elementB - Explanation of concept     - Collections
+		- elementC - Example of concept		- Collections
+		- elementD - Where it is used		- Applications of Collections
+		- elementE - sample code		- java codes for Collections
+		- elementF - image			- relevant images of Collections
+		- elementG - summary			- summary of Collections
+		- elementH - interview questions	- knowledge check about the Collections
+	- ElementA - concept2 - List
+		- elementB - Explanation of concept     - List
+		- elementC - Example of concept		- List
+		- elementD - Where it is used		- Applications of List
+		- elementE - sample code		- java codes for List
+		- elementF - image			- relevant images of List
+		- elementG - summary			- summary of List
+		- elementH - interview questions	- knowledge check about the List
+	- ElementA - concept3 	- Set
+		- elementB - Explanation of concept     - Set
+		- elementC - Example of concept		- Set
+		- elementD - Where it is used		- Applications of Set
+		- elementE - sample code		- java code for Set
+		- elementF - image			- relevant images of Set
+		- elementG - summary			- summary of Set
+		- elementH - interview questions	- knowledge check about Set
+	- ElementA - concept4 	- Map
+		- elementB - Explanation of concept     - Map
+		- elementC - Example of concept		- Map
+		- elementD - Where it is used		- Applications of Map
+		- elementE - sample code		- java code for Map
+		- elementF - image			- relevant images of Map
+		- elementG - summary			- summary of Map
+		- elementH - interview questions	- knowledge check about Map
+Lesson9	-  Multithreading
+	- ElementA - concept1 	- Threads
+		- elementB - Explanation of concept     - Threads
+		- elementC - Example of concept		- Threads
+		- elementD - Where it is used		- Applications of Threads
+		- elementE - sample code		- java codes for Threads
+		- elementF - image			- relevant images of Threads
+		- elementG - summary			- summary of Threads
+		- elementH - interview questions	- knowledge check about the Threads
+	- ElementA - concept2 - Thread Synchronization
+		- elementB - Explanation of concept     - Thread Synchronization
+		- elementC - Example of concept		- Thread Synchronization
+		- elementD - Where it is used		- Applications of Thread Synchronization
+		- elementE - sample code		- java codes for Thread Synchronization
+		- elementF - image			- relevant images of Thread Synchronization
+		- elementG - summary			- summary of Thread Synchronization
+		- elementH - interview questions	- knowledge check about the Thread Synchronization
+Lesson10	-  JDBC (Java Database Connectivity)
+	- ElementA - concept1 	- Introduction to JDBC
+		- elementB - Explanation of concept     - Introduction to JDBC
+		- elementC - Example of concept		- NA
+		- elementD - Where it is used		- Applications of Introduction to JDBC
+		- elementE - sample code		- java codes for Introduction to JDBC
+		- elementF - image			- relevant images of Introduction to JDBC
+		- elementG - summary			- summary of Introduction to JDBC
+		- elementH - interview questions	- knowledge check about the Introduction to JDBC
+	- ElementA - concept2 - Connecting to Databases
+		- elementB - Explanation of concept     - Connecting to Databases
+		- elementC - Example of concept		- Connecting to Databases
+		- elementD - Where it is used		- Applications of Connecting to Databases
+		- elementE - sample code		- java codes for Connecting to Databases
+		- elementF - image			- relevant images of Connecting to Databases
+		- elementG - summary			- summary of Connecting to Databases
+		- elementH - interview questions	- knowledge check about the Connecting to Databases
+	- ElementA - concept3 	- Performing CRUD Operations
+		- elementB - Explanation of concept     - Performing CRUD Operations
+		- elementC - Example of concept		- Performing CRUD Operations
+		- elementD - Where it is used		- Applications of Performing CRUD Operations
+		- elementE - sample code		- java code for Performing CRUD Operations
+		- elementF - image			- relevant images of Performing CRUD Operations
+		- elementG - summary			- summary of Performing CRUD Operations
+		- elementH - interview questions	- knowledge check about Performing CRUD Operations
+
+
+
+
+
 
