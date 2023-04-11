@@ -107,7 +107,7 @@ In this example, we declare a byte array containing the ASCII values for the let
 
 Overall, bytes are useful for storing small integers and dealing with binary data in Java. 👍
 
-### Applications of Byte:
+## Applications of Byte:
 
 🧠 **Memory efficiency:** The byte data type requires less memory than other integer types such as int or long. If you have a large amount of data to store, using byte can help you save memory. 💾💿🧮
 
@@ -147,5 +147,12 @@ Overall, bytes are useful for storing small integers and dealing with binary dat
 
 Overall, the `short` data type in Java is useful for storing integer values within a limited range, and can be used in a variety of programming scenarios, including arithmetic operations, loop control, and variable declarations. 🤖
 
+## Applications of Short:
+
+🧠💾💿🧮 **Memory efficiency:** The byte data type requires less memory than other integer types such as int or long. If you have a large amount of data to store, using byte can help you save memory.
+
+🌐📡💬💻 **Network communication:** When sending data over a network, using byte can be more efficient than using other integer types. This is because the size of the data being sent can be reduced, leading to faster data transfer.
+
+🖼️📷🌈🔍 **Image processing:** In image processing, images are represented as matrices of pixel values. Each pixel in an image can have a value ranging from 0 to 255. Since the byte data type can hold integer values from -128 to 127, it can be used to represent each pixel in an image.
 
 
