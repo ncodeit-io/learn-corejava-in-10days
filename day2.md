@@ -565,3 +565,102 @@ Primitive data types are fundamental building blocks in Java programming, and th
 20.  **🧩 Puzzles and Games:** Data types are used in puzzles and games for handling user input, tracking progress, and generating outputs.
 
 In conclusion, the uses of primitive data types are vast and varied, and they are essential in almost every aspect of programming and software development. 🤓
+
+# 🤔 Multiple Choice Questions on Primitive Data Types in Java 🤔
+
+Are you ready to test your knowledge of primitive data types with these tricky multiple-choice questions? 🧐
+
+1.  Which of the following data types is NOT a numeric data type in Java? 
+a) byte
+b) int 
+c) float 
+d) boolean 
+Answer: d) boolean ❌
+    
+2.  What is the default value of an uninitialized boolean variable in Java? 
+a) true 
+b) false 
+c) 0 
+d) null 
+Answer: b) false ❓
+    
+3.  Which of the following data types is used to store text in Java? 
+a) char 
+b) String 
+c) byte 
+d) float 
+Answer: b) String 💬
+    
+4.  What is the maximum value that can be stored in a byte variable in Java? 
+a) 127 
+b) 255 
+c) 32767 
+d) 2147483647 
+Answer: a) 127 🔢
+    
+5.  Which of the following data types has the largest storage size in Java? 
+a) byte 
+b) int 
+c) long 
+d) double 
+Answer: d) double 💾
+    
+6.  What is the output of the following code snippet?
+![](https://i.gyazo.com/acd8c73f12f22fb3c79b0980282ab56f.png)
+
+
+
+     a) 10 
+b) 20 
+c) 30 
+d) Compiler error 
+Answer: b) 20 📝
+
+7.  What is the output of the following code snippet?
+![](https://i.gyazo.com/a45247d54d28e0c28b1ce02b7aa1e159.png)
+
+
+
+    a) 30 
+b) 29 
+c) 19 
+d) 18 Answer: b) 29 🔢
+
+8.  Which of the following data types has the highest precision in Java? 
+a) byte 
+b) short 
+c) int 
+d) long 
+Answer: d) long 🔍
+    
+9.  What is the output of the following code snippet?
+    ![](https://i.gyazo.com/616e2116e80feae98a5b019a3a05ee68.png)
+
+    a) 1, 2 
+b) 2, 1 
+c) 3, 2 
+d) 2, 3 
+Answer: b) 2, 1 🔢
+
+10.  What is the size of a short data type in Java? 
+a) 8 bits 
+b) 16 bits 
+c) 32 bits 
+d) 64 bits 
+Answer: b) 16 bits 🤏
+    
+11.  Which of the following is NOT a primitive data type in Java? 
+a) char 
+b) boolean 
+c) float 
+d) String 
+Answer: d) String ❌
+    
+12.  What is the output of the following code snippet?
+![](https://i.gyazo.com/48e8d7347078135e75eabe47c3841325.png)
+a) 30 
+b) 29 
+c) 21 
+d) 20 
+Answer: a) 30 🔢
+
