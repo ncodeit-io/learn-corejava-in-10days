@@ -183,7 +183,7 @@ Operators in Java are symbols that are used to perform operations on variables a
 ![](https://i.gyazo.com/fb50085eea5375d43cc0093d1af15229.png)
 
 
-## Byte
+## 🍫Byte
 
 Byte is one of the eight primitive data types in Java. It is an 8-bit signed two's complement integer, which means it can represent values from -128 to 127. 🔢
 
@@ -227,3 +227,38 @@ In this example, we read bytes from a file named "file.txt" using the `FileInput
 In this example, we declare a byte array containing the ASCII values for the letters "Hello". We then create a new `String` object using the byte array, and print the resulting string to the console. 💬
 
 Overall, bytes are useful for storing small integers and dealing with binary data in Java. 👍
+
+##  📏 Short
+👋 In Java, the `short` data type is a primitive data type that can hold integer values ranging from -32,768 to 32,767. It is a 16-bit signed two's complement integer. Here are some 🔥 examples of using the `short` data type in Java:
+
+#### 💡 Example 1: Declaring a `short` variable and assigning a value to it.
+
+**Java code**
+
+![](https://i.gyazo.com/5f966b81c55decde60c191ddcb903d85.png)
+
+👉 In this example, a `short` variable named `temperature` is declared and assigned the value `-10`. The value of the `temperature` variable is then printed to the console along with a message.
+
+#### 💡 Example 2: Performing arithmetic operations on `short` variables.
+
+**Java code**
+
+
+![](https://i.gyazo.com/682363464aca2d20807f95538d053adc.png)
+
+
+👉 In this example, two `short` variables `a` and `b` are declared and assigned the values `100` and `200`, respectively. Arithmetic operations such as addition, subtraction, multiplication, and division are performed on these variables and the results are stored in `short` variables `sum`, `difference`, `product`, and `quotient`. 🤓 Note that when performing arithmetic operations on `short` variables, it is important to cast the result to `short` to prevent overflow. The results are then printed to the console.
+
+#### 💡 Example 3: Using `short` in a for loop.
+
+**Java code**
+
+![](https://i.gyazo.com/509e8541e0e56649c47333a0a8410904.png)
+
+
+👉 In this example, a `short` variable `n` is declared and assigned the value `10`. A `for` loop is used to iterate from `1` to `n` using a `short` variable `i`. The value of `i` is printed to the console on each iteration, separated by a space. 🚀
+
+Overall, the `short` data type in Java is useful for storing integer values within a limited range, and can be used in a variety of programming scenarios, including arithmetic operations, loop control, and variable declarations. 🤖
+
+
+
