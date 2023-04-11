@@ -119,9 +119,9 @@ Java has had a significant impact on the software industry, and the language is 
     -   d) Java Database Connectivity 📊
         Answer: D. Java Database Connectivity 📊
         
-        ## Data Types and Operators in Java 🚀
+# Data Types and Operators in Java 🚀
 
-# Data Types in Java 📊
+### Data Types in Java 📊
 
 Data types in Java are used to define the type of data that can be stored in a variable. Java has two types of data types: Primitive data types and Reference data types.
 
@@ -145,8 +145,23 @@ Operators in Java are symbols that are used to perform operations on variables a
 5.  Assignment Operators 👈🔢 Assignment operators are used to assign a value to a variable.
     
 6.  Conditional Operators ❓🤔❗ Conditional operators are used to evaluate two expressions and return the result of the first expression if it is true, or the result of the second expression if it is false.
-![](https://i.gyazo.com/16086c8183a31997e41ecdd0fe9f929d.png)  ![](https://i.gyazo.com/63eeb0a305471a4dcc4b79a48189ee80.png)
+
+
+![](https://i.gyazo.com/16086c8183a31997e41ecdd0fe9f929d.png)     ![](https://i.gyazo.com/63eeb0a305471a4dcc4b79a48189ee80.png)
+
 ## Primitive data types
+| Data Type | Description                                     | Range                                                   | Example Representation |
+| --------- | ----------------------------------------------- | ------------------------------------------------------- | ---------------------- |
+| byte      | 8-bit signed two’s complement integer           | -128 to 127                                             | 🍫 chocolate bars      |
+| short     | 16-bit signed two’s complement integer          | -32,768 to 32,767                                       | 📏 rulers              |
+| int       | 32-bit signed two’s complement integer          | -2,147,483,648 to 2,147,483,647                         | 🎲 dice                |
+| long      | 64-bit signed two’s complement integer          | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 🌎 globes              |
+| float     | 32-bit floating point number                    | 1.4e-45 to 3.4028235e+38                                | 🧊 ice cubes           |
+| double    | 64-bit floating point number                    | 4.9e-324 to 1.7976931348623157e+308                     | 🔬 microscopes         |
+| char      | 16-bit Unicode character                         | ‘\u0000’ (or 0) to ‘\uffff’ (or 65,535)                 | 🔤 alphabets           |
+| boolean   | represents a boolean value, true or false        | true or false                                           | ☑️ checkmarks or ❌ X marks |
+
+
 🔢🌟Primitive data types are the building blocks of Java programming. There are eight primitive data types that represent simple values. Let's take a look at them:
 
 👉 **byte:** This data type is an 8-bit signed two's complement integer. It can be represented using 🍫 chocolate bars from -128 to 127.
@@ -166,16 +181,7 @@ Operators in Java are symbols that are used to perform operations on variables a
 👉 **boolean:** This data type represents a boolean value, which can be either true or false. It can be represented using ☑️ checkmarks for true and ❌ X marks for false.
 
 ![](https://i.gyazo.com/fb50085eea5375d43cc0093d1af15229.png)
-| Data Type | Description                                     | Range                                                   | Example Representation |
-| --------- | ----------------------------------------------- | ------------------------------------------------------- | ---------------------- |
-| byte      | 8-bit signed two’s complement integer           | -128 to 127                                             | 🍫 chocolate bars      |
-| short     | 16-bit signed two’s complement integer          | -32,768 to 32,767                                       | 📏 rulers              |
-| int       | 32-bit signed two’s complement integer          | -2,147,483,648 to 2,147,483,647                         | 🎲 dice                |
-| long      | 64-bit signed two’s complement integer          | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 🌎 globes              |
-| float     | 32-bit floating point number                    | 1.4e-45 to 3.4028235e+38                                | 🧊 ice cubes           |
-| double    | 64-bit floating point number                    | 4.9e-324 to 1.7976931348623157e+308                     | 🔬 microscopes         |
-| char      | 16-bit Unicode character                         | ‘\u0000’ (or 0) to ‘\uffff’ (or 65,535)                 | 🔤 alphabets           |
-| boolean   | represents a boolean value, true or false        | true or false                                           | ☑️ checkmarks or ❌ X marks |
+
 
 ## Byte
 
