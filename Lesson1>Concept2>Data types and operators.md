@@ -4,26 +4,26 @@
 
 Data types in Java are used to define the type of data that can be stored in a variable. Java has two types of data types: Primitive data types and Reference data types.
 
-1.  Primitive Data Types 🧰 Java has eight primitive data types: byte, short, int, long, float, double, char, and boolean. These data types are used to represent the most basic types of data in Java.
+1.  **Primitive Data Types** 🧰 Java has eight primitive data types: byte, short, int, long, float, double, char, and boolean. These data types are used to represent the most basic types of data in Java.
     
-2.  Reference Data Types 🗂️ Java has four reference data types: Class, Interface, Array, and String. Reference data types are used to represent more complex data structures.
+2.  **Reference Data Types** 🗂️ Java has four reference data types: Class, Interface, Array, and String. Reference data types are used to represent more complex data structures.
     
 
 ### Operators in Java 🎯
 
 Operators in Java are symbols that are used to perform operations on variables and values. Java has several types of operators, including arithmetic, relational, logical, bitwise, assignment, and conditional operators.
 
-1.  Arithmetic Operators ➕➖✖️➗ Arithmetic operators are used to perform arithmetic operations such as addition, subtraction, multiplication, division, and modulus.
+1.  **Arithmetic Operators** ➕➖✖️➗ Arithmetic operators are used to perform arithmetic operations such as addition, subtraction, multiplication, division, and modulus.
     
-2.  Relational Operators ➡️<br>➡️= Relational operators are used to compare two values or variables. The result of the comparison is a boolean value (true or false).
+2.  **Relational Operators** ➡️<br>➡️= Relational operators are used to compare two values or variables. The result of the comparison is a boolean value (true or false).
     
-3.  Logical Operators 🔢👨‍👩‍👧‍👦 Logical operators are used to combine two or more boolean expressions and evaluate the resulting expression as true or false.
+3.  **Logical Operators** 🔢👨‍👩‍👧‍👦 Logical operators are used to combine two or more boolean expressions and evaluate the resulting expression as true or false.
     
-4.  Bitwise Operators 🔢🤖 Bitwise operators are used to perform bit-level operations on variables.
+4.  **Bitwise Operators** 🔢🤖 Bitwise operators are used to perform bit-level operations on variables.
     
-5.  Assignment Operators 👈🔢 Assignment operators are used to assign a value to a variable.
+5.  **Assignment Operators** 👈🔢 Assignment operators are used to assign a value to a variable.
     
-6.  Conditional Operators ❓🤔❗ Conditional operators are used to evaluate two expressions and return the result of the first expression if it is true, or the result of the second expression if it is false.
+6.  **Conditional Operators** ❓🤔❗ Conditional operators are used to evaluate two expressions and return the result of the first expression if it is true, or the result of the second expression if it is false.
 
 
 ![](https://i.gyazo.com/16086c8183a31997e41ecdd0fe9f929d.png)     ![](https://i.gyazo.com/63eeb0a305471a4dcc4b79a48189ee80.png)
@@ -154,5 +154,7 @@ Overall, the `short` data type in Java is useful for storing integer values with
 🌐📡💬💻 **Network communication:** When sending data over a network, using byte can be more efficient than using other integer types. This is because the size of the data being sent can be reduced, leading to faster data transfer.
 
 🖼️📷🌈🔍 **Image processing:** In image processing, images are represented as matrices of pixel values. Each pixel in an image can have a value ranging from 0 to 255. Since the byte data type can hold integer values from -128 to 127, it can be used to represent each pixel in an image.
+
+
 
 
