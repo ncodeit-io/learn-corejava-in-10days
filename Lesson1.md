@@ -150,19 +150,19 @@ Operators in Java are symbols that are used to perform operations on variables a
 ![](https://i.gyazo.com/16086c8183a31997e41ecdd0fe9f929d.png)     ![](https://i.gyazo.com/63eeb0a305471a4dcc4b79a48189ee80.png)
 
 ## Primitive data types
-| Data Type | Description                                     | Range                                                   | Example Representation |
+| **Data Type** | **Description**                                     | **Range**                                                   | **Example Representation** |
 | --------- | ----------------------------------------------- | ------------------------------------------------------- | ---------------------- |
-| byte      | 8-bit signed two’s complement integer           | -128 to 127                                             | 🍫 chocolate bars      |
-| short     | 16-bit signed two’s complement integer          | -32,768 to 32,767                                       | 📏 rulers              |
-| int       | 32-bit signed two’s complement integer          | -2,147,483,648 to 2,147,483,647                         | 🎲 dice                |
-| long      | 64-bit signed two’s complement integer          | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 🌎 globes              |
-| float     | 32-bit floating point number                    | 1.4e-45 to 3.4028235e+38                                | 🧊 ice cubes           |
-| double    | 64-bit floating point number                    | 4.9e-324 to 1.7976931348623157e+308                     | 🔬 microscopes         |
-| char      | 16-bit Unicode character                         | ‘\u0000’ (or 0) to ‘\uffff’ (or 65,535)                 | 🔤 alphabets           |
-| boolean   | represents a boolean value, true or false        | true or false                                           | ☑️ checkmarks or ❌ X marks |
+| 🍫byte      | 8-bit signed two’s complement integer           | -128 to 127                                             | 🍫 chocolate bars      |
+| 📏short     | 16-bit signed two’s complement integer          | -32,768 to 32,767                                       | 📏 rulers              |
+| 🎲int       | 32-bit signed two’s complement integer          | -2,147,483,648 to 2,147,483,647                         | 🎲 dice                |
+| 🌎long      | 64-bit signed two’s complement integer          | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 🌎 globes              |
+| 🧊float     | 32-bit floating point number                    | 1.4e-45 to 3.4028235e+38                                | 🧊 ice cubes           |
+| 🔬double    | 64-bit floating point number                    | 4.9e-324 to 1.7976931348623157e+308                     | 🔬 microscopes         |
+| 🔤char      | 16-bit Unicode character                         | ‘\u0000’ (or 0) to ‘\uffff’ (or 65,535)                 | 🔤 alphabets           |
+| ☑️boolean   | represents a boolean value, true or false        | true or false                                           | ☑️ checkmarks or ❌ X marks |
 
 
-🔢🌟Primitive data types are the building blocks of Java programming. There are eight primitive data types that represent simple values. Let's take a look at them:
+**🔢🌟Primitive data types** are the building blocks of Java programming. There are eight primitive data types that represent simple values. Let's take a look at them:
 
 👉 **byte:** This data type is an 8-bit signed two's complement integer. It can be represented using 🍫 chocolate bars from -128 to 127.
 
@@ -193,6 +193,8 @@ Here are three examples of how bytes can be used in Java:
 
 ### Example 1: Storing a byte value in a variable
 **Java code:**
+
+
 ![](https://i.gyazo.com/af547651caece6c96b542b99c37c0659.png)
 
 **Output:**
@@ -204,6 +206,8 @@ We then print the value of `myByte` using the `System.out.println()` method. �
 ### Example 2: Reading bytes from a file
 
 **Java code:**
+
+
 ![](https://i.gyazo.com/75e4d1031624457cff9ca2b51988c885.png)
 
 **Output:**
@@ -213,6 +217,8 @@ In this example, we read bytes from a file named "file.txt" using the `FileInput
 
 ### Example 3: Converting a byte array to a string
 **Java code:**
+
+
 ![](https://i.gyazo.com/6a69d2ed4bbf237a324b03459d065ec6.png)
 
 **Output:**
