@@ -275,3 +275,62 @@ So go ahead and give it a try! ✨ Happy coding! 💻
 💼 **Impressing Employers** 💼 Believe it or not, the "Hello World" program can be a great way to impress potential employers! It shows that you have a solid understanding of the basics of programming and that you're serious about your career. Plus, it's always impressive to see a candidate who can write clean and concise code, even for a simple program like "Hello World"! 😎
 
 🎉 So, as you can see, the "Hello World" program is much more than just a simple program that displays a message on the screen. It's a powerful tool that's used by programmers, teachers, and employers all over the world! 🌎
+
+
+## 🤔 Test Your Knowledge: "Hello World" Program in Java 🌎
+
+Let's see how much you know about the classic "Hello World" program in Java! 🚀
+
+#### Question 1️⃣:
+
+Which of the following is **not** a common use case for a "Hello World" program in Java? 
+- a) Testing the Java runtime environment 🤔 
+- b) Learning the basics of Java syntax 📚 
+- c) Creating a fully-functional software application 💻 
+- d) Familiarizing oneself with a new programming language 🌟
+
+<ins>Answer:</ins> c) Creating a fully-functional software application
+
+#### Question 2️⃣:
+
+What is the name of the method that serves as the entry point for the "Hello World" program? 
+- a) start() 🚀 
+- b) main() 🌎 
+- c) run() 🏃‍♂️ 
+- d) execute() ⚙️
+
+<ins>Answer:</ins> b) main()
+
+#### Question 3️⃣:
+
+Which of the following is the correct syntax for printing "Hello, World!" to the console in Java? 
+- a) System.out.println("Hello, World!"); 🖨️ 
+- b) Console.writeLine("Hello, World!"); 📝 
+- c) print("Hello, World!"); 📜 
+- d) display("Hello, World!"); 📺
+
+<ins>Answer:</ins> a) System.out.println("Hello, World!");
+
+#### Question 4️⃣:
+
+In Java, what is the purpose of the keyword "public" in the line "public static void main(String[] args)"? 
+- a) To indicate that the method is available to code outside of its class 🌟 
+- b) To specify that the method returns a value 💰 
+- c) To ensure that the method is thread-safe 🔒 
+- d) To indicate that the method requires user input 👥
+
+<ins>Answer:</ins> a) To indicate that the method is available to code outside of its class
+
+#### Question 5️⃣:
+
+What is the purpose of the semicolon at the end of the line "System.out.println("Hello, World!");" in a Java program? 
+- a) It is optional, and is only used for readability 🤓 
+- b) It tells Java where the end of the line of code is 🚩 
+- c) It is used to indicate the end of the method call 📞 
+- d) It is a syntax error and should not be included in the code ❌
+
+<ins>Answer:</ins> b) It tells Java where the end of the line of code is
+
+#### 🎉 Congratulations, you've completed the quiz! 🎉
+
+I hope you enjoyed testing your knowledge on the "Hello World" program in Java!
