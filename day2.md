@@ -987,6 +987,7 @@ Bitwise operators are used to perform bitwise operations.
 
 
 **Less than (<)**
+
 ![](https://i.gyazo.com/a589b831a135a639b859d592fb664353.png)
 
 
@@ -1009,7 +1010,7 @@ Bitwise operators are used to perform bitwise operations.
 
 ![](https://i.gyazo.com/aafd05a89edd6ebbc61fce0bae37e0ed.png)
 
-## 🚀 Summary of Java Operators
+# 🚀 Summary of Java Operators
 
 Java operators are like magic spells 🧙‍♂️ that allow you to perform operations on different types of variables, such as numbers and strings. With the right combination of operators, you can create powerful programs that can do amazing things! 💥
 
@@ -1037,7 +1038,7 @@ The ternary operator (?:) is like a mask 🎭 that allows you to make decisions 
 
 Bitwise operators are like puzzle pieces 🧩 that allow you to manipulate the bits of a number. You can use them to perform operations like AND (&), OR (|), XOR (^), left shift (<<), and right shift (>>).
 
-## 🌟 Java Operators - Applications 🚀
+# 🌟 Java Operators - Applications 🚀
 
 Java operators are the building blocks of every Java program, and they play a crucial role in creating powerful applications that can do amazing things! Let's take a colorful journey through some of the most common applications of Java operators:
 
@@ -1069,46 +1070,46 @@ Think you know everything about Java operators? Let's put your knowledge to the 
 
 1. Which operator is used to assign a value to a variable in Java?
 
-A. +
-B. -
-C. *
-D. =
+- A. +
+- B. -
+- C. *
+- D. =
 
 Answer: D. =
 
 2. Which operator is used to find the remainder of two numbers in Java?
 
-A. %
-B. /
-C. *
-D. +
+- A. %
+- B. /
+- C. *
+- D. +
 
 Answer: A. %
 
 3. Which operator is used to check if two values are equal in Java?
 
-A. !=
-B. ==
-C. <=
-D. >=
+- A. !=
+- B. ==
+- C. <=
+- D. >=
 
 Answer: B. ==
 
 4. Which operator is used to combine two or more conditions in Java?
 
-A. &&
-B. ||
-C. !
-D. =
+- A. &&
+- B. ||
+- C. !
+- D. =
 
 Answer: A. &&
 
 5. Which operator is used to manipulate the bits of a number in Java?
 
-A. &
-B. |
-C. ^
-D. <<
+- A. &
+- B. |
+- C. ^
+- D. <<
 
 Answer: D. <<
 
