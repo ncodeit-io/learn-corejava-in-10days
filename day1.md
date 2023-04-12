@@ -370,8 +370,7 @@ In Java, everything is defined within classes. A class is a blueprint for an obj
 
 #### Example of Class Declaration:
 
-![](https://i.gyazo.com/8dfb97b482a72f4afd96e6488c36dbe9.png)
-
+![image](https://user-images.githubusercontent.com/129722425/231368831-8198ab3e-03ef-4eea-8a54-63685d65829a.png)
 
 In the above example, the "public" keyword specifies that the class is visible and accessible to other classes, and "MyClass" is the name of the class.
 
@@ -382,7 +381,7 @@ The main method is the entry point of a Java program. It is the first method tha
 
 #### Example of Main Method:
 
-![](https://i.gyazo.com/e40c025383fbf476f2cc091e9c74baf5.png)
+![image](https://user-images.githubusercontent.com/129722425/231368953-c8bcc709-9dd4-43ae-968a-ad6d4e759abf.png)
 
 
 
@@ -392,7 +391,7 @@ In Java, variables are used to store data or values. Variables can be of differe
 
 #### Example of Variables:
 
-![](https://i.gyazo.com/d753d653863470d929c7eb34713f66ce.png)
+![image](https://user-images.githubusercontent.com/129722425/231369106-06ef4999-7118-401c-94f8-8caf766e1181.png)
 
 In the above example, "age" is an **integer variable,** "height" is a **double variable**, "isMarried" is a **boolean variable**, and "name" is a **String variable.**
 
@@ -402,7 +401,7 @@ Java supports various types of operators, such as arithmetic, comparison, logica
 
 #### Example of Operators:
 
-![](https://i.gyazo.com/ec93f20886c77f21fee829aaaed7734b.png)
+![image](https://user-images.githubusercontent.com/129722425/231369223-11ba068a-b292-4b72-a67a-cc0d31d5f856.png)
 
 In the above example, "z" is the sum of "x" and "y", "result" is false because "x" is not greater than "y", and "flag3" is false because "flag1 && flag2" is false.
 
@@ -412,8 +411,7 @@ Java supports various types of control statements, such as if-else statements, f
 
 #### Example of Control Statements:
 
-![](https://i.gyazo.com/13237ed9e5915a0c1cb2d5f5915d12c6.png)
-
+![image](https://user-images.githubusercontent.com/129722425/231369391-c9a65897-55e4-45a0-b81b-2ae812b84086.png)
 
 
 Java is a versatile programming language that offers a wide range of features for developing applications of different types. Whether you are a beginner or an experienced developer, Java has something to offer for everyone! 😎
