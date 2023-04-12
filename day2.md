@@ -685,8 +685,7 @@ Answer: a) 30 🔢
 
 In Java programming language, reference data types are used to refer to objects rather than values. Unlike primitive data types, which hold a specific value such as a number or a character, reference data types hold a reference or memory address of an object that is stored elsewhere in the computer's memory. 🧠
 
-![](https://i.gyazo.com/203fcb7d37cf99176a1459f41b2cc4f4.png)
-
+![image](https://user-images.githubusercontent.com/129722425/231403423-a7bb75cf-1ea1-4a6c-a996-ccfc5b9e2262.png)
 
 
 ## 🚀 Examples of Reference Data Types in Java
