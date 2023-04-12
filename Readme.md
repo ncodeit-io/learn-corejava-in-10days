@@ -4,7 +4,7 @@
 |        |                                             | - 🛠️ Setting up Java and IDE<br>- 👋 Hello World program                                   |
 |        |                                             | - 🔤 Introduction to Java syntax                                                           |
 | 2      | 🧮 Data Types and Operators                  | - Primitive Data Types<br>- Variables<br>- Operators                                       |
-|        |                                             | - 🖋️ Creating variables and constants<br>- ➕➖ Arithmetic and logical operators<br>- 🤔 Conditional statements |
+|        |                                             | - 🖋️ Creating variables and constants<br>- ➕➖ Arithmetic and logical operators |
 | 3      | 🎛️ Control Statements                        | - If-else statements<br>- Loops                                                            |
 |        |                                             | - 🧪 Implementing conditional statements<br>- 🔁 Looping structures<br>- 💡 Solving programming problems using loops and conditional statements |
 | 4      | 📚 Arrays and Methods                         | - Arrays<br>- Methods                                                                      |
