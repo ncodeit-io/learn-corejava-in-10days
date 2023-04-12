@@ -357,12 +357,11 @@ Java supports both single-line and multi-line comments. Single-line comments sta
 
 #### Example of Single-Line Comment:
 
-![](https://i.gyazo.com/94c56d033c16cb30e3103a765c11f8bc.png)
+![image](https://user-images.githubusercontent.com/129722425/231368521-ca9a5233-7891-4fa0-8663-db65a20bd155.png)
 
 #### Example of Multi-Line Comment:
 
-![](https://i.gyazo.com/317a09dcbdbe419675e84e40582438de.png)
-
+![image](https://user-images.githubusercontent.com/129722425/231368577-13bedf75-cbf2-4244-95db-c533cc9e2e9c.png)
 
 
 ## 💻 Class Declaration:
