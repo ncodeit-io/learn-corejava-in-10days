@@ -606,6 +606,8 @@ Answer: a) 127 🔢
 Answer: d) double 💾
     
 6.  What is the output of the following code snippet?
+
+
 ![](https://i.gyazo.com/acd8c73f12f22fb3c79b0980282ab56f.png)
 
 
@@ -619,6 +621,8 @@ Answer: d) double 💾
 Answer: b) 20 📝
 
 7.  What is the output of the following code snippet?
+
+
 ![](https://i.gyazo.com/a45247d54d28e0c28b1ce02b7aa1e159.png)
 
 
@@ -639,6 +643,8 @@ Answer: b) 29 🔢
 Answer: d) long 🔍
     
 9.  What is the output of the following code snippet?
+
+
     ![](https://i.gyazo.com/616e2116e80feae98a5b019a3a05ee68.png)
 
     
