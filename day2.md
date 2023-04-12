@@ -847,6 +847,31 @@ Are you ready to test your knowledge of reference data types in Java? Take this 
 
 👍 Congratulations! You've completed the reference data types quiz! 🎊
 
+# 👋 Creating variables and constants in Java! 🔢
+
+To create a variable in Java, you can use the following syntax:
+
+**java code**
+
+![](https://i.gyazo.com/be8a670e67db493f3d105446d277c505.png)
+
+
+🚀 To make things more exciting, you can use your favorite datatype such as `int`, `double`, or `String`! 🤩
+
+But that's not all! 😎 You can also create a constant in Java using the `final` keyword:
+
+**java code**
+
+![](https://i.gyazo.com/429629840a844a4d25387cfbbe983572.png)
+
+🔒 Constants are special because once they are assigned a value, their value cannot be changed throughout the program.
+
+So, make sure to use constants when you have a value that needs to remain the same throughout your program! ⚙️
+
+When creating variables and constants, it's important to choose names that are descriptive and meaningful. 💡
+
+So go ahead, get creative and have fun with your variable and constant names! 🎉
+
 # Java Operators 🚀
 
 In Java, operators are special symbols that are used to perform operations on variables and values.  😎
