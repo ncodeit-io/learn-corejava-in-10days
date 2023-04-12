@@ -724,7 +724,7 @@ A class is a blueprint or template for creating objects. It defines the properti
 
 
 
-## 🤔 Differences between Primitive and Reference Data Types
+# 🤔 Differences between Primitive and Reference Data Types
 
 Here is a table summarizing the differences between primitive data types and reference data types in Java:
 
@@ -760,7 +760,7 @@ Here is an example Java code that demonstrates the use of reference data types:
 ## 🎉 Conclusion
 In conclusion, reference data types are an important concept in Java programming language, as they allow developers to work with objects and manipulate them as needed. Understanding how to use reference data types is essential for writing effective Java programs.
 
-## 💻 Summary 
+# 💻 Summary 
 
 🎉 **Reference data types**, refer to objects or instances of classes. Reference data types include **classes**, **interfaces**, **arrays**, and **enumerated types**.
 
@@ -778,7 +778,7 @@ In conclusion, reference data types are an important concept in Java programming
 
 👍 So, get ready to explore the amazing world of reference data types in Java! 🤩
 
-## 🚀 Applications of Java Reference Data Types
+# 🚀 Applications of Java Reference Data Types
 
 🌟 **Reference data types** are an essential component of object-oriented programming in Java. They allow developers to create complex data structures that can be used in a variety of applications.
 
@@ -802,7 +802,7 @@ In conclusion, reference data types are an important concept in Java programming
 
 👍 Reference data types are an essential tool for developers who want to create complex and powerful applications in Java. So, start exploring the amazing world of reference data types today! 🤩
 
-## 🤓 Reference Data Types Quiz!
+# 🤓 Reference Data Types Quiz!
 
 Are you ready to test your knowledge of reference data types in Java? Take this quiz to find out!
 
@@ -913,7 +913,7 @@ Bitwise operators are used to perform bitwise operations.
 | >>       | Right shift              | 6 >> 2  |
 | >>>      | Zero fill right shift    | 6 >>> 2 |
 
-## Java code examples for operators:
+# Java code examples for operators:
 
 **Addition (+)**
 
