@@ -21,6 +21,7 @@ Whether you're building a simple desktop application or a complex web-based syst
 With these features and more, JDBC makes it easy to interact with databases in your Java programs! 😎
 
 # 🔌 Connecting to Databases in JDBC (Java Database Connectivity) 🔍
+![Java Program to Search the Contents of a Table in JDBC - GeeksforGeeks](https://media.geeksforgeeks.org/wp-content/uploads/20210817110459/javadatabaseconnectivitysteps.jpg)
 
 Now that you know what JDBC is all about, let's dive into the nitty-gritty of connecting to databases in your Java programs! 💻
 
@@ -52,50 +53,68 @@ Connecting to databases with JDBC may sound daunting, but with these steps and s
     
     **java code**
     
-    `![](https://i.gyazo.com/d16624a49ce000a2d9d9b66b9ba0b646.png)
+   ``` java
+   Class.forName("com.mysql.jdbc.Driver");
+```
     
     
-    🚚 This loads the MySQL JDBC driver class into memory.
+🚚 This loads the MySQL JDBC driver class into memory.
     
 2.  **Establish a connection to the database**
     
     **java code**
     
-   ![](https://i.gyazo.com/8e89a8f8aca4e7662adbd56c77a6c968.png)
+``` java
+String url = "jdbc:mysql://localhost/mydatabase";
+Connection con = DriverManager.getConnection(url, "user", "password");
+```
   
     
-   🔌 This creates a connection object to a MySQL database called "mydatabase" running on the local machine, using the provided username and password.
+🔌 This creates a connection object to a MySQL database called "mydatabase" running on the local machine, using the provided username and password.
     
 3.  **Create a statement object**
     
       **java code**
     
-    ![](https://i.gyazo.com/3fca082037745309d7824e8226c0ae24.png)
+  ``` java
+  Statement stmt = con.createStatement();
+```
     
     
-    📝 This creates a statement object that we can use to execute SQL statements against the database.
+📝 This creates a statement object that we can use to execute SQL statements against the database.
     
 4.  **Execute SQL statements**
     
     **java code**
-    ![](https://i.gyazo.com/bc7a03c77483a4c5e68873febb477c7d.png)
+ ``` java
+ String sql = "SELECT * FROM customers";
+ResultSet rs = stmt.executeQuery(sql);
+```
  
     
-    🚀 This executes a `SELECT` statement to retrieve all rows from the "customers" table in the database.
+🚀 This executes a `SELECT` statement to retrieve all rows from the "customers" table in the database.
     
 5.  **Process the results**
     
       **java code**
     
-![](https://i.gyazo.com/4abfaf3c67249c5b5413cc31744368f0.png)
-
-    
+``` java
+while (rs.next()) {
+    String name = rs.getString("name");
+    int age = rs.getInt("age");
+    System.out.println("Name: " + name + ", Age: " + age);
+}
+rs.close();
+stmt.close();
+con.close();
+```
   🎉 This processes the results of the `SELECT` statement, printing out each customer's name and age. Finally, we close the result set, statement, and connection objects.
     
 
 And that's it! With these steps and a little bit of SQL knowledge, you can start using JDBC to connect to and interact with databases in your Java programs. 🤓
 
 # 📝 Performing CRUD Operations in JDBC (Java Database Connectivity) 💥
+![GitHub - Vikas7075/crud-operation-in-java-jdbc: Java Console application to  perform basic CRUD (Create, Read, Update, Delete) operations for Employees  profiles](https://user-images.githubusercontent.com/92617547/217149884-944ff30a-9b97-42ae-a5bf-b863707bbe75.jpg)
 
 Now that you know how to connect to a database using JDBC, let's talk about how to perform CRUD operations - that is, creating, reading, updating, and deleting data - in your Java programs! 🤩
 
@@ -105,8 +124,10 @@ To create new data in a database using JDBC, you'll need to use an `INSERT` stat
 
 **java code**
 
-![](https://i.gyazo.com/9e25fb39a096ce69347ec856b58e6af7.png)
-
+``` java
+String insertSql = "INSERT INTO customers (name, email) VALUES ('John Doe', 'johndoe@example.com')";
+stmt.executeUpdate(insertSql);
+```
 
 This code creates a new row in the "customers" table, with a name of "John Doe" and an email of "[johndoe@example.com](mailto:johndoe@example.com)". The `executeUpdate()` method is used to execute the `INSERT` statement.
 
@@ -116,7 +137,15 @@ To read data from a database using JDBC, you'll need to use a `SELECT` statement
 
 **java code**
 
-![](https://i.gyazo.com/f15d98b70afc39709b9c88abb16f558b.png)
+``` java
+String selectSql = "SELECT * FROM customers";
+ResultSet rs = stmt.executeQuery(selectSql);
+while (rs.next()) {
+    String name = rs.getString("name");
+    String email = rs.getString("email");
+    System.out.println("Name: " + name + ", Email: " + email);
+}
+```
 
 
 This code retrieves all rows from the "customers" table, and prints out each customer's name and email. The `executeQuery()` method is used to execute the `SELECT` statement, and the `ResultSet` object is used to retrieve the results.
@@ -127,7 +156,10 @@ To update existing data in a database using JDBC, you'll need to use an `UPDATE`
 
 **java code**
 
-![](https://i.gyazo.com/31233c73c3e0b6bc8ef282bc744f52a2.png)
+``` java
+String updateSql = "UPDATE customers SET email = 'newemail@example.com' WHERE id = 1";
+stmt.executeUpdate(updateSql);
+```
 
 
 This code updates the email of the customer with an ID of 1 to "[newemail@example.com](mailto:newemail@example.com)". The `executeUpdate()` method is used to execute the `UPDATE` statement.
@@ -138,7 +170,10 @@ To delete data from a database using JDBC, you'll need to use a `DELETE` stateme
 
 **java code**
 
-![](https://i.gyazo.com/e222e2b15dd6b37c79c8a157a32b1fc8.png)
+``` java
+String deleteSql = "DELETE FROM customers WHERE id = 1";
+stmt.executeUpdate(deleteSql);
+```
 
 
 This code deletes the customer with an ID of 1 from the "customers" table. The `executeUpdate()` method is used to execute the `DELETE` statement.
@@ -146,6 +181,7 @@ This code deletes the customer with an ID of 1 from the "customers" table. The `
 And there you have it - with these basic CRUD operations, you can manipulate data in your databases using JDBC and Java! 🙌
 
 # 📊 Executing SQL Queries in JDBC (Java Database Connectivity) 💻
+![Connecting to SQL Server using JDBC – Developers Corner – Java Web  Development Tutorials](https://avaldes.com/wp-content/uploads/2011/05/Java_jdbc.png)
 
 SQL queries are an essential part of working with databases, and JDBC provides a powerful way to execute them from within your Java programs. Let's dive into how it's done, using some fun emojis along the way! 🤩
 
@@ -155,7 +191,15 @@ To execute a basic SQL query using JDBC, you'll need to use a `Statement` object
 
 **java code**
 
-![](https://i.gyazo.com/d73bf6ba0b977649cea41e49e9924df4.png)
+``` java
+String selectSql = "SELECT * FROM customers";
+ResultSet rs = stmt.executeQuery(selectSql);
+while (rs.next()) {
+    String name = rs.getString("name");
+    String email = rs.getString("email");
+    System.out.println("Name: " + name + ", Email: " + email);
+}
+```
 
 
 This code executes a `SELECT` statement to retrieve all rows from the "customers" table in the database. The `executeQuery()` method is used to execute the query, and the `ResultSet` object is used to retrieve the results.
@@ -166,7 +210,17 @@ Sometimes, you'll want to execute a query with parameters that are not known at 
 
 **java code**
 
-![](https://i.gyazo.com/60f60a25030e053eb13a34ca1591cdb6.png)
+``` java
+String paramSql = "SELECT * FROM customers WHERE age > ?";
+PreparedStatement pstmt = conn.prepareStatement(paramSql);
+pstmt.setInt(1, 18);
+ResultSet rs = pstmt.executeQuery();
+while (rs.next()) {
+    String name = rs.getString("name");
+    int age = rs.getInt("age");
+    System.out.println("Name: " + name + ", Age: " + age);
+}
+```
 
 This code executes a `SELECT` statement with a parameterized `WHERE` clause to retrieve all customers over the age of 18. The `PreparedStatement` object is used to prepare the query with a placeholder for the age parameter, which is set to 18 using the `setInt()` method.
 
@@ -176,7 +230,13 @@ Stored procedures are precompiled SQL code that can be called from within your J
 
 **java code**
 
-![](https://i.gyazo.com/3ac4f05fdd79a59f39b44f8b2b8f7183.png)
+``` java
+CallableStatement cstmt = conn.prepareCall("{? = call get_customer_count()}");
+cstmt.registerOutParameter(1, Types.INTEGER);
+cstmt.execute();
+int count = cstmt.getInt(1);
+System.out.println("Number of customers: " + count);
+```
 
 
 This code executes a stored procedure called "get_customer_count", which takes no input parameters and returns a single integer value. The `prepareCall()` method is used to prepare the statement with the stored procedure call, and the `registerOutParameter()` method is used to specify the type of the output parameter. Finally, the `execute()` method is called to execute the stored procedure, and the result is retrieved using the `getInt()` method.
@@ -197,8 +257,13 @@ Next, we'll create a simple database table to hold our data. Here's an example S
 
 **sql code**
 
-![](https://i.gyazo.com/d75e659b6385ed02be44c099f2f8ceea.png)
- 
+``` sql
+CREATE TABLE customers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255)
+);
+```
 
 This table has three columns: `id`, `name`, and `email`. The `id` column is the primary key for the table.
 
@@ -208,7 +273,29 @@ Before we can interact with the database, we need to establish a connection to i
 
 **java code**
 
-![](https://i.gyazo.com/7ca96eadba60b65bb00f9e14cbd56c89.png)
+``` java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DatabaseConnection {
+    public static void main(String[] args) {
+        // Database credentials
+        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "your_username";
+        String password = "your_password";
+
+        // Establishing the connection
+        try (Connection connection = DriverManager.getConnection(url, username, password)) {
+            System.out.println("Connected to the database!");
+            // Perform operations on the database here
+        } catch (SQLException e) {
+            System.err.println("Error connecting to the database!");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 
 This code creates a new `Connection` object using the `DriverManager.getConnection()` method. Replace the URL, username, and password with the values for your database.
@@ -219,7 +306,41 @@ Now that we have a connection to the database, let's insert some data into the `
 
 **java code**
 
-![](https://i.gyazo.com/65fdb785f39a1bf43beb183f23ee7aef.png)
+``` java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class InsertData {
+    public static void main(String[] args) {
+        // Database credentials
+        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "your_username";
+        String password = "your_password";
+
+        // Inserting data into the table
+        String insertQuery = "INSERT INTO users (id, name, email) VALUES (?, ?, ?)";
+
+        try (Connection connection = DriverManager.getConnection(url, username, password);
+             PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+
+            // Setting values for the query parameters
+            preparedStatement.setInt(1, 1);
+            preparedStatement.setString(2, "Alice");
+            preparedStatement.setString(3, "alice@example.com");
+
+            // Executing the insert query
+            int rowsAffected = preparedStatement.executeUpdate();
+            System.out.println(rowsAffected + " row(s) affected.");
+
+        } catch (SQLException e) {
+            System.err.println("Error inserting data into the table!");
+            e.printStackTrace();
+        }
+    }
+}
+```
  
 
 This code inserts a new row into the `users` table with an `id` of 1, a `name` of "Alice", and an `email` of "[alice@example.com](mailto:alice@example.com)".
@@ -230,8 +351,46 @@ Now that we've inserted some data, let's retrieve it from the `users` table:
 
 **java code**
 
-![](https://i.gyazo.com/c230e4be1fa934ece57eba70f63c5e02.png)
+``` java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
+public class RetrieveData {
+    public static void main(String[] args) {
+        // Database credentials
+        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "your_username";
+        String password = "your_password";
+
+        // Retrieving data from the table
+        String selectQuery = "SELECT name, email FROM users WHERE id = ?";
+
+        try (Connection connection = DriverManager.getConnection(url, username, password);
+             PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
+
+            // Setting the value for the query parameter
+            preparedStatement.setInt(1, 1);
+
+            // Executing the select query
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            // Processing the results
+            while (resultSet.next()) {
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                System.out.println("Name: " + name + ", Email: " + email);
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error retrieving data from the table!");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 This code selects the row with an `id` of 1 from the `users` table and prints out the `name` and `email` columns.
 
@@ -241,8 +400,46 @@ If we need to update some data in the `users` table, we can do that with JDBC as
 
 **java code**
 
-![](https://i.gyazo.com/5ddb3225a4d09525f16bb730693e5ebf.png)
+``` java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
+public class UpdateData {
+    public static void main(String[] args) {
+        // Database credentials
+        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "your_username";
+        String password = "your_password";
+
+        // Updating data in the table
+        String updateQuery = "UPDATE users SET email = ? WHERE id = ?";
+
+        try (Connection connection = DriverManager.getConnection(url, username, password);
+             PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
+
+            // Setting the values for the query parameters
+            preparedStatement.setString(1, "newemail@example.com");
+            preparedStatement.setInt(2, 1);
+
+            // Executing the update query
+            int rowsAffected = preparedStatement.executeUpdate();
+
+            // Checking if the update was successful
+            if (rowsAffected > 0) {
+                System.out.println("Data updated successfully!");
+            } else {
+                System.out.println("No rows were updated.");
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error updating data in the table!");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 This code updates the `email` column for the row with an `id` of 1 to "[newemail@example.com](mailto:newemail@example.com)".
 
@@ -252,8 +449,45 @@ Finally, let's delete some data from the `users` table:
 
 **java code**
 
-![](https://i.gyazo.com/25f31d78c4fcfdc808be091b3b206f6c.png)
-` 
+``` java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class DeleteData {
+    public static void main(String[] args) {
+        // Database credentials
+        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "your_username";
+        String password = "your_password";
+
+        // Deleting data from the table
+        String deleteQuery = "DELETE FROM users WHERE id = ?";
+
+        try (Connection connection = DriverManager.getConnection(url, username, password);
+             PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
+
+            // Setting the value for the query parameter
+            preparedStatement.setInt(1, 1);
+
+            // Executing the delete query
+            int rowsAffected = preparedStatement.executeUpdate();
+
+            // Checking if the deletion was successful
+            if (rowsAffected > 0) {
+                System.out.println("Data deleted successfully!");
+            } else {
+                System.out.println("No rows were deleted.");
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error deleting data from the table!");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 This code deletes the row with an `id` of 1 from the `users` table.
 
@@ -396,3 +630,4 @@ Answer: D) CREATE INDEX customers index ON customers (name) 🛑
 Answer: B) It allows the database to process multiple SQL statements as a single unit ⚡️ 
 
 
+🚀 "Congratulations on completing the course! Education is not just about learning new facts, but also about shaping the way we think and perceive the world. Remember that this accomplishment is just the beginning of your journey. Embrace every challenge as an opportunity to grow, and never stop pursuing your dreams. Your determination and hard work will pave the way to success. Believe in yourself and your abilities, for you have the power to create the future you envision. Keep pushing forward, and let your passion guide you to greatness!" 🚀 
