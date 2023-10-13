@@ -1,4 +1,5 @@
 # Data Types and Operators in Java 🚀
+![Data Types in Java 2023](https://logicmojo.com/assets/dist/new_pages/images/data-types-in-java.png)
 
 ### Data Types in Java 📊
 
@@ -10,6 +11,7 @@ Data types in Java are used to define the type of data that can be stored in a v
     
 
 ### Operators in Java 🎯
+![Operators in Java & Operator Precedence with Program Example - Simple  Snippets](https://simplesnippets.tech/wp-content/uploads/2018/03/java-operators-and-operator-precedence-1280x720.jpg)
 
 Operators in Java are symbols that are used to perform operations on variables and values. Java has several types of operators, including arithmetic, relational, logical, bitwise, assignment, and conditional operators.
 
@@ -29,6 +31,9 @@ Operators in Java are symbols that are used to perform operations on variables a
 ![](https://i.gyazo.com/16086c8183a31997e41ecdd0fe9f929d.png)     ![](https://i.gyazo.com/63eeb0a305471a4dcc4b79a48189ee80.png)
 
 # Primitive data types
+
+
+![Difference Between Primitive and Non Primitive | by Ibnu Arseno | Code  Storm | Medium](https://miro.medium.com/v2/resize:fit:1400/1*_V2YDcTBeB2JblHY9B8ITw.jpeg)
 | **Data Type** | **Description**                                     | **Range**                                                   | **Example Representation** |
 | --------- | ----------------------------------------------- | ------------------------------------------------------- | ---------------------- |
 | 🍫byte      | 8-bit signed two’s complement integer           | -128 to 127                                             | 🍫 chocolate bars      |
@@ -39,6 +44,9 @@ Operators in Java are symbols that are used to perform operations on variables a
 | 🔬double    | 64-bit floating point number                    | 4.9e-324 to 1.7976931348623157e+308                     | 🔬 microscopes         |
 | 🔤char      | 16-bit Unicode character                         | ‘\u0000’ (or 0) to ‘\uffff’ (or 65,535)                 | 🔤 alphabets           |
 | ☑️boolean   | represents a boolean value, true or false        | true or false                                           | ☑️ checkmarks or ❌ X marks |
+
+
+
 
 
 **🔢🌟Primitive data types** are the building blocks of Java programming. There are eight primitive data types that represent simple values. Let's take a look at them:
@@ -59,7 +67,6 @@ Operators in Java are symbols that are used to perform operations on variables a
 
 👉 **boolean:** This data type represents a boolean value, which can be either true or false. It can be represented using ☑️ checkmarks for true and ❌ X marks for false.
 
-![](https://i.gyazo.com/fb50085eea5375d43cc0093d1af15229.png)
 
 
 # 🍫`byte` Primitive Data Type
@@ -72,9 +79,15 @@ Here are three examples of how bytes can be used in Java:
 
 ### Example 1: Storing a byte value in a variable
 **Java code:**
-
-
-![](https://i.gyazo.com/af547651caece6c96b542b99c37c0659.png)
+``` java
+public class ByteExample {
+    public static void main(String[] args) {
+        // Storing a byte value in a variable
+        byte myByte = 10;
+        System.out.println(myByte);
+    }
+}
+```
 
 **Output:**
 **`10`** 
@@ -85,9 +98,27 @@ We then print the value of `myByte` using the `System.out.println()` method. �
 ### Example 2: Reading bytes from a file
 
 **Java code:**
+``` java
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class ReadBytesExample {
+    public static void main(String[] args) {
+        // Reading bytes from a file
+        try (FileInputStream input = new FileInputStream("file.txt")) {
+            int byteValue;
+            while ((byteValue = input.read()) != -1) {
+                System.out.print(byteValue + " ");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 
-![](https://i.gyazo.com/75e4d1031624457cff9ca2b51988c885.png)
+
 
 **Output:**
 **`72 101 108 108 111 32 87 111 114 108 100`** 
@@ -96,9 +127,16 @@ In this example, we read bytes from a file named "file.txt" using the `FileInput
 
 ### Example 3: Converting a byte array to a string
 **Java code:**
-
-
-![](https://i.gyazo.com/6a69d2ed4bbf237a324b03459d065ec6.png)
+``` java
+public class ByteArrayToStringExample {
+    public static void main(String[] args) {
+        // Converting a byte array to a string
+        byte[] byteArray = {72, 101, 108, 108, 111}; // ASCII values for "Hello"
+        String str = new String(byteArray);
+        System.out.println(str);
+    }
+}
+```
 
 **Output:**
 **`Hello`** 
@@ -122,7 +160,16 @@ Overall, bytes are useful for storing small integers and dealing with binary dat
 
 **Java code**
 
-![](https://i.gyazo.com/5f966b81c55decde60c191ddcb903d85.png)
+``` java
+public class ShortVariableExample {
+    public static void main(String[] args) {
+        // Declaring a short variable and assigning a value to it
+        short temperature = -10;
+        System.out.println("The temperature is: " + temperature);
+    }
+}
+```
+
 
 👉 In this example, a `short` variable named `temperature` is declared and assigned the value `-10`. The value of the `temperature` variable is then printed to the console along with a message.
 
@@ -130,8 +177,26 @@ Overall, bytes are useful for storing small integers and dealing with binary dat
 
 **Java code**
 
+``` java
+public class ShortArithmeticExample {
+    public static void main(String[] args) {
+        // Performing arithmetic operations on short variables
+        short a = 100;
+        short b = 200;
+        short sum = (short) (a + b);
+        short difference = (short) (b - a);
+        short product = (short) (a * b);
+        short quotient = (short) (b / a);
+        
+        // Printing the results
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + difference);
+        System.out.println("Product: " + product);
+        System.out.println("Quotient: " + quotient);
+    }
+}
+```
 
-![](https://i.gyazo.com/682363464aca2d20807f95538d053adc.png)
 
 
 👉 In this example, two `short` variables `a` and `b` are declared and assigned the values `100` and `200`, respectively. Arithmetic operations such as addition, subtraction, multiplication, and division are performed on these variables and the results are stored in `short` variables `sum`, `difference`, `product`, and `quotient`. 🤓 Note that when performing arithmetic operations on `short` variables, it is important to cast the result to `short` to prevent overflow. The results are then printed to the console.
@@ -140,7 +205,17 @@ Overall, bytes are useful for storing small integers and dealing with binary dat
 
 **Java code**
 
-![](https://i.gyazo.com/509e8541e0e56649c47333a0a8410904.png)
+``` java
+public class ShortForLoopExample {
+    public static void main(String[] args) {
+        // Using short in a for loop
+        short n = 10;
+        for (short i = 1; i <= n; i++) {
+            System.out.print(i + " ");
+        }
+    }
+}
+```
 
 
 👉 In this example, a `short` variable `n` is declared and assigned the value `10`. A `for` loop is used to iterate from `1` to `n` using a `short` variable `i`. The value of `i` is printed to the console on each iteration, separated by a space. 🚀
@@ -175,7 +250,15 @@ Declaring an int variable and assigning a value to it.
 
 **java code** 
 
-![](https://i.gyazo.com/3574bd90f72e1dd278fae1fc9089bbe6.png)
+``` java
+public class IntVariableExample {
+    public static void main(String[] args) {
+        // Declaring an int variable and assigning a value to it
+        int number = 42;
+        System.out.println("The value of the number is: " + number);
+    }
+}
+```
 
 
 
@@ -185,7 +268,26 @@ Performing arithmetic operations on int variables.
 **java code** 
 
 
-![](https://i.gyazo.com/bf8927f1fecea12e07437a80f3285771.png)
+``` java
+public class IntArithmeticExample {
+    public static void main(String[] args) {
+        // Performing arithmetic operations on int variables
+        int a = 20;
+        int b = 10;
+        int sum = a + b;
+        int difference = a - b;
+        int product = a * b;
+        int quotient = a / b;
+
+        // Printing the results
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + difference);
+        System.out.println("Product: " + product);
+        System.out.println("Quotient: " + quotient);
+    }
+}
+```
+
 
 
 
@@ -194,7 +296,18 @@ Using int in a loop.
 
 **java code** 
 
-![](https://i.gyazo.com/daa4f4aa788086dfece83ed2d1057b31.png)
+``` java
+public class IntLoopExample {
+    public static void main(String[] args) {
+        // Using int in a loop
+        int n = 5;
+        for (int i = 0; i < n; i++) {
+            System.out.print(i + " ");
+        }
+    }
+}
+```
+
 
 
 
@@ -238,7 +351,15 @@ Declaring a long variable and assigning a value to it.
 
 **java code**
 
-![](https://i.gyazo.com/36477376998d513f67d88396d7114170.png)
+``` java
+public class LongVariableExample {
+    public static void main(String[] args) {
+        // Declaring a long variable and assigning a value to it
+        long population = 7_000_000_000L;
+        System.out.println("The world population is: " + population);
+    }
+}
+```
 
 
 
@@ -251,7 +372,25 @@ Performing arithmetic operations on long variables.
 
 
 
-![](https://i.gyazo.com/b17d7749eb7454cc1613d38fdcd07cae.png)
+``` java
+public class LongArithmeticExample {
+    public static void main(String[] args) {
+        // Performing arithmetic operations on long variables
+        long a = 1234567890123L;
+        long b = 9876543210987L;
+        long sum = a + b;
+        long difference = a - b;
+        long product = a * b;
+        long quotient = a / b;
+
+        // Printing the results
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + difference);
+        System.out.println("Product: " + product);
+        System.out.println("Quotient: " + quotient);
+    }
+}
+```
 
 
 
@@ -263,7 +402,17 @@ Using long in a loop.
 **java code**
 
 
-![](https://i.gyazo.com/de2fc356597cfa8ba68176b3ffd83d5c.png)
+``` java
+public class LongLoopExample {
+    public static void main(String[] args) {
+        // Using long in a loop
+        long n = 10_000_000_000L;
+        for (long i = 1; i <= n; i++) {
+            System.out.print(i + " ");
+        }
+    }
+}
+```
 
 
 
@@ -337,7 +486,21 @@ Calculating the Area of a Circle
 
 **java code**
 
-![](https://i.gyazo.com/e4e0a35de95f4a85d7c0c5fd26795893.png)
+``` java
+import java.util.Scanner;
+
+public class CircleArea {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the radius of the circle: ");
+        float radius = input.nextFloat();
+        double area = Math.PI * Math.pow(radius, 2);
+
+        System.out.println("The area of the circle is: " + area);
+    }
+}
+```
 
 
 
@@ -348,7 +511,19 @@ Temperature Conversion
 
 **java code**
 
-![](https://i.gyazo.com/9d178ac9d0d349c51a8c3d951e493da0.png)
+``` java
+public class TemperatureConversion {
+    public static void main(String[] args) {
+        double celsius = 37.5;
+        double fahrenheit = (celsius * 9 / 5) + 32;
+
+        System.out.println("Temperature in Celsius: " + celsius);
+        System.out.println("Temperature in Fahrenheit: " + fahrenheit);
+    }
+}
+```
+
+
 
 
 
@@ -359,7 +534,18 @@ Calculating the Hypotenuse of a Right-Angled Triangle
 
 **java code**
 
-![](https://i.gyazo.com/2fe0fcbae998a921dc7650d82e396cc5.png)
+``` java
+public class HypotenuseCalculation {
+    public static void main(String[] args) {
+        double side1 = 3.0;
+        double side2 = 4.0;
+        double hypotenuse = Math.sqrt(Math.pow(side1, 2) + Math.pow(side2, 2));
+
+        System.out.println("The hypotenuse of the right-angled triangle is: " + hypotenuse);
+    }
+}
+```
+
 
 
 
@@ -394,7 +580,15 @@ To declare a `char` variable in Java, you can use the following syntax:
 **java code**
 
 
-![](https://i.gyazo.com/b6bcedc9df88b6732d2febfa23e4ab9d.png)
+``` java
+public class CharVariableExample1 {
+    public static void main(String[] args) {
+        // Declaring a char variable and assigning a character to it
+        char myChar = 'A';
+        System.out.println("The character is: " + myChar);
+    }
+}
+```
 
 
 Here, the variable `myChar` is assigned the character 'A'. Note that characters in Java are enclosed in single quotes (' '), while strings are enclosed in double quotes (" ").
@@ -403,8 +597,15 @@ You can also use the Unicode value of a character to assign it to a `char` varia
 
 **java code**
 
-![](https://i.gyazo.com/b394233192dc3fad65adcbd5408091b8.png)
-
+``` java
+public class CharVariableExample2 {
+    public static void main(String[] args) {
+        // Using Unicode value to assign a character to a char variable
+        char myChar = '\u005A';
+        System.out.println("The character is: " + myChar);
+    }
+}
+```
 
 
 Here, the variable `myChar` is assigned the character 'Z', which has a Unicode value of 0x005A. It's like a secret code 🔐 that unlocks the 🚪 door 🚪 to a specific character in the Unicode universe.
@@ -415,7 +616,26 @@ The `char` data type can be used in many ways in Java, such as representing lett
 
 
 
-![](https://i.gyazo.com/056ef4ee0054b17b8773ac2d6b500b3e.png)
+``` java
+public class CharUsageExamples {
+    public static void main(String[] args) {
+        // Using char in different ways
+        char myChar = '❤';
+        String stringWithChar = "I love " + myChar;
+        System.out.println(stringWithChar);
+
+        // Accepting a single character input from the user
+        char inputChar = 'a'; // Assuming 'a' is the input from the user
+        System.out.println("The user entered: " + inputChar);
+
+        // Storing and printing emojis using char array
+        char[] emojis = {'😊', '🚀', '🎉'};
+        for (char emoji : emojis) {
+            System.out.print(emoji + " ");
+        }
+    }
+}
+```
 
 
 In the first example, the `char` variable `myChar` holds the ❤️ symbol, which is then inserted into a string. In the second example, the `char` variable `inputChar` is used to store a single character entered by the user. Finally, in the third example, the `char` data type is used to store individual letters of a string in an array, which are then printed to the screen as emojis.
@@ -449,7 +669,18 @@ The `boolean` primitive data type can be declared using the keyword `boolean`, f
 **java code**
 
 
-![](https://i.gyazo.com/b76e098c55ff9b629f5077e776df2036.png)
+``` java
+public class BooleanDeclarationExample {
+    public static void main(String[] args) {
+        // Declaration and initialization of a boolean variable
+        boolean isJavaFun = true;
+        boolean isFishTasty = false;
+
+        System.out.println("Is Java fun? " + isJavaFun);
+        System.out.println("Is fish tasty? " + isFishTasty);
+    }
+}
+```
 
 
 
@@ -461,21 +692,49 @@ Java provides several operators to perform logical operations on boolean values.
 
 **java code**
 
-![](https://i.gyazo.com/a78e6ccf677a47f8500442c68edee840.png)
+``` java
+public class LogicalAndOperatorExample {
+    public static void main(String[] args) {
+        // Logical AND (&&) operator
+        boolean a = true;
+        boolean b = false;
+        System.out.println(a && b); // Output: false
+    }
+}
+```
 
 
 2.  **Logical OR (`||`) operator:** It returns **true** if either of the operands is true, otherwise, it returns **false**. 🔀
 
 **java code**
 
-![](https://i.gyazo.com/e36781af8aab5a520596fe21fd834752.png)
+``` java
+public class LogicalOrOperatorExample {
+    public static void main(String[] args) {
+        // Logical OR (||) operator
+        boolean a = true;
+        boolean b = false;
+        System.out.println(a || b); // Output: true
+    }
+}
+```
 
 
 3.  **Logical NOT (`!`) operator:** It returns the opposite of the operand's value. If the operand is **true**, it returns **false**, and if the operand is **false**, it returns **true**. 🔀
 
 **java code**
 
-![](https://i.gyazo.com/04389ea64bae33b4b5334f56d1eabc3d.png)
+``` java
+public class LogicalNotOperatorExample {
+    public static void main(String[] args) {
+        // Logical NOT (!) operator
+        boolean a = true;
+        boolean b = false;
+        System.out.println(!a); // Output: false
+        System.out.println(!b); // Output: true
+    }
+}
+```
 
 
 ## Usage 💻
@@ -484,8 +743,20 @@ Boolean values are used in conditional statements to determine the flow of the p
 
 **java code**
 
-![](https://i.gyazo.com/6a9f11bb745b48a37a7db275642b86ec.png)
+``` java
+public class BooleanConditionalExample {
+    public static void main(String[] args) {
+        // Using boolean in conditional statements
+        boolean isLightOn = true;
 
+        if (isLightOn) {
+            System.out.println("The light is on");
+        } else {
+            System.out.println("The light is off");
+        }
+    }
+}
+```
 
 
 In conclusion, the `boolean` primitive data type in Java is a simple yet important data type that is used to represent logical values. It is widely used in conditional statements and logical operations. ✨
@@ -608,12 +879,18 @@ Answer: d) double 💾
 6.  What is the output of the following code snippet?
 
 
-![](https://i.gyazo.com/acd8c73f12f22fb3c79b0980282ab56f.png)
+``` java
+int x = 10;
+int y = 20;
 
+if (x < 10) {
+    y++;
+} else {
+    y = y + 2;
+}
 
-
-     
-     
+System.out.println(y);
+```  
 - a) 10 
 - b) 20 
 - c) 30 
@@ -623,12 +900,18 @@ Answer: b) 20 📝
 7.  What is the output of the following code snippet?
 
 
-![](https://i.gyazo.com/a45247d54d28e0c28b1ce02b7aa1e159.png)
+``` java
+int x = 10;
+int y = 20;
 
+if (x < 10) {
+    y--;
+} else {
+    y = y - 2;
+}
 
-
-    
-    
+System.out.println(y);
+```
 - a) 30 
 - b) 29 
 - c) 19 
@@ -644,11 +927,17 @@ Answer: d) long 🔍
     
 9.  What is the output of the following code snippet?
 
+``` java
+int a = 1;
+int b = 2;
 
-    ![](https://i.gyazo.com/616e2116e80feae98a5b019a3a05ee68.png)
+a = a + b;
+b = a - b;
+a = a - b;
 
-    
-    
+System.out.println(a + ", " + b);
+```
+   
 - a) 1, 2 
 - b) 2, 1 
 - c) 3, 2 
@@ -670,11 +959,18 @@ Answer: b) 16 bits 🤏
 Answer: d) String ❌
     
 12.  What is the output of the following code snippet?
+``` java
+int x = 10;
+int y = 20;
 
+if (x < 10) {
+    y++;
+} else {
+    y = y + 10;
+}
 
-![](https://i.gyazo.com/48e8d7347078135e75eabe47c3841325.png)
-
-
+System.out.println(y);
+```
 - a) 30 
 - b) 29 
 - c) 21 
@@ -698,8 +994,24 @@ Objects are instances of a class that contains both data and methods to operate 
 
 **java code**
 
-![](https://i.gyazo.com/469861db00c3ff5a70d8bf57efa9f026.png)
+``` java
+public class ObjectExample {
+    String name;
 
+    public ObjectExample(String name) {
+        this.name = name;
+    }
+
+    public void printName() {
+        System.out.println("Name: " + this.name);
+    }
+
+    public static void main(String[] args) {
+        ObjectExample obj = new ObjectExample("John");
+        obj.printName();
+    }
+}
+```
 
 
 ### 📚 Arrays
@@ -708,8 +1020,24 @@ An array is a collection of variables of the same data type. In Java, arrays are
 
 **java code**
 
-![](https://i.gyazo.com/91cf778132233bee9cb9c711c33ab766.png)
+``` java
+public class ArrayExample {
+    public static void main(String[] args) {
+        // Creating an array
+        int[] numbers = new int[5];
+        numbers[0] = 1;
+        numbers[1] = 2;
+        numbers[2] = 3;
+        numbers[3] = 4;
+        numbers[4] = 5;
 
+        // Accessing and printing array elements
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+    }
+}
+```
 
 
 ### 🏫 Classes
@@ -719,7 +1047,31 @@ A class is a blueprint or template for creating objects. It defines the properti
 **java code**
 
 
-![](https://i.gyazo.com/c5a68af6e16a086c72b49dba4e74572a.png)
+``` java
+public class MyClass {
+    // Properties
+    String color;
+    int size;
+
+    // Constructor
+    public MyClass(String color, int size) {
+        this.color = color;
+        this.size = size;
+    }
+
+    // Method
+    public void display() {
+        System.out.println("Color: " + color);
+        System.out.println("Size: " + size);
+    }
+
+    public static void main(String[] args) {
+        // Creating an object of the class
+        MyClass obj = new MyClass("Red", 5);
+        obj.display();
+    }
+}
+```
 
 
 
@@ -746,13 +1098,32 @@ Here is an example Java code that demonstrates the use of reference data types:
 **java code**
 
 
-![](https://i.gyazo.com/6819544924df74c8907a06868e8f58a3.png)
+``` java
+public class ReferenceDataTypeExample {
+    public static void main(String[] args) {
+        // Creating a reference variable and assigning an object to it
+        String str = new String("Hello, Java!");
+
+        // Using methods of the String class
+        System.out.println("Length of the string: " + str.length());
+        System.out.println("Character at index 7: " + str.charAt(7));
+
+        // Another example using the Math class
+        double squareRoot = Math.sqrt(25);
+        System.out.println("Square root of 25: " + squareRoot);
+    }
+}
+```
 
 
 
 **Output:**
 
-![](https://i.gyazo.com/981fd9dc7be0a9867c8628523f3b8bbb.png)
+``` mathematica
+Length of the string: 11
+Character at index 7: J
+Square root of 25: 5.0
+```
 
 
 
@@ -852,7 +1223,19 @@ To create a variable in Java, you can use the following syntax:
 
 **java code**
 
-![](https://i.gyazo.com/be8a670e67db493f3d105446d277c505.png)
+``` java
+public class VariableExample {
+    public static void main(String[] args) {
+        // Creating variables
+        int num1 = 10;
+        double num2 = 5.5;
+        String text = "Hello, Java!";
+        System.out.println("num1: " + num1);
+        System.out.println("num2: " + num2);
+        System.out.println("text: " + text);
+    }
+}
+```
 
 
 🚀 To make things more exciting, you can use your favorite datatype such as `int`, `double`, or `String`! 🤩
@@ -861,7 +1244,15 @@ But that's not all! 😎 You can also create a constant in Java using the `final
 
 **java code**
 
-![](https://i.gyazo.com/429629840a844a4d25387cfbbe983572.png)
+``` java
+public class ConstantExample {
+    public static void main(String[] args) {
+        // Creating a constant
+        final double PI = 3.14;
+        System.out.println("PI: " + PI);
+    }
+}
+```
 
 🔒 Constants are special because once they are assigned a value, their value cannot be changed throughout the program.
 
@@ -872,6 +1263,7 @@ When creating variables and constants, it's important to choose names that are d
 So go ahead, get creative and have fun with your variable and constant names! 🎉
 
 # Java Operators 🚀
+![Operators in Java with Examples - Dot Net Tutorials](https://dotnettutorials.net/wp-content/uploads/2020/08/Operators-in-Java-with-Examples.jpeg)
 
 In Java, operators are special symbols that are used to perform operations on variables and values.  😎
 
@@ -941,98 +1333,189 @@ Bitwise operators are used to perform bitwise operations.
 
 **Addition (+)**
 
-![](https://i.gyazo.com/7b657bbd277592a65cbbc5b91cb2d671.png)
+``` java
+int a = 5;
+int b = 10;
+int sum = a + b;
+System.out.println("Sum: " + sum);
+```
 
 
 **Subtraction (-)**
 
-![](https://i.gyazo.com/12507059ac6984b2eddd47a028383e10.png)
+``` java
+int a = 10;
+int b = 5;
+int difference = a - b;
+System.out.println("Difference: " + difference);
+```
 
 
 
 **Multiplication (*)**
 
-![](https://i.gyazo.com/7fdac5a8af4b0d30259d9f7b0c144764.png)
+``` java
+int a = 5;
+int b = 2;
+int product = a * b;
+System.out.println("Product: " + product);
+```
 
 
 **Division (/)**
 
-![](https://i.gyazo.com/25afc9b99fcd9ef58ccf0a36cffee81e.png)
+``` java
+int a = 10;
+int b = 2;
+int quotient = a / b;
+System.out.println("Quotient: " + quotient);
+```
 
 
 **Modulus (%)**
 
-![](https://i.gyazo.com/7e2ddc6f0e78be5404be33be1d4d7bb8.png)
-
+``` java
+int a = 10;
+int b = 3;
+int remainder = a % b;
+System.out.println("Remainder: " + remainder);
+```
 
 
 **Assignment (=)**
 
-![](https://i.gyazo.com/f87bc7c2a6278cc8a504542e93287d01.png)
+``` java
+int a = 5;
+int b;
+b = a;
+System.out.println("b: " + b);
+```
 
 
 **Addition assignment (+=)**
 
-![](https://i.gyazo.com/3fbacc2b726decd9f2dd00d91cde337a.png)
+``` java
+int a = 5;
+int b = 3;
+a += b;
+System.out.println("a: " + a);
+```
 
 
 **Subtraction assignment (-=)**
 
-![](https://i.gyazo.com/17bb7287e5bafb9e4ebcf616892810bb.png)
+``` java
+int a = 5;
+int b = 3;
+a -= b;
+System.out.println("a: " + a);
+```
 
 
 **Multiplication assignment (*=)**
 
-![](https://i.gyazo.com/7194924a513e32ee8ab256530010fe21.png)
+``` java
+int a = 5;
+int b = 3;
+a *= b;
+System.out.println("a: " + a);
+```
 
 **Division assignment (/=)**
 
-![](https://i.gyazo.com/94ec5aef2889c1bae75458956875c70a.png)
+``` java
+int a = 10;
+int b = 2;
+a /= b;
+System.out.println("a: " + a);
+```
 
 
 **Modulus assignment (%=)**
 
-![](https://i.gyazo.com/7a02b1ea14eb9eff634625b3388f45de.png)
+``` java
+int a = 10;
+int b = 3;
+a %= b;
+System.out.println("a: " + a);
+```
 
 
 **Equal to (==)**
 
-![](https://i.gyazo.com/ed908c61209d087873b28f82f14bbc8a.png)
+``` java
+int a = 5;
+int b = 5;
+boolean isEqual = (a == b);
+System.out.println("Is equal: " + isEqual);
+```
 
 
 **Not equal to (!=)**
 
-![](https://i.gyazo.com/f748b5c5d3df8ea8008292c46e43eef9.png)
+``` java
+int a = 5;
+int b = 3;
+boolean notEqual = (a != b);
+System.out.println("Not equal: " + notEqual);
+```
  
 
 **Greater than (>)**
 
-![](https://i.gyazo.com/19843e34276685e21d3c5bd21f731c7e.png)
+``` java
+int a = 5;
+int b = 3;
+boolean greaterThan = (a > b);
+System.out.println("Greater than: " + greaterThan);
+```
 
 
 **Less than (<)**
 
-![](https://i.gyazo.com/a589b831a135a639b859d592fb664353.png)
+``` java
+int a = 3;
+int b = 5;
+boolean lessThan = (a < b);
+System.out.println("Less than: " + lessThan);
+```
 
 
 **Greater than or equal to (>=)**
 
-![](https://i.gyazo.com/256274347507c0ba9db0a56163e61553.png)
+``` java
+int a = 5;
+int b = 5;
+boolean greaterThanOrEqual = (a >= b);
+System.out.println("Greater than or equal to: " + greaterThanOrEqual);
+```
 
 
 **Less than or equal to (<=)**
 
-![](https://i.gyazo.com/877e38e85e1e6d9b3b6384940f65e3ca.png)
+``` java
+int a = 3;
+int b = 5;
+boolean lessThanOrEqual = (a <= b);
+System.out.println("Less than or equal to: " + lessThanOrEqual);
+```
 
 
 **Logical AND (&&)**
 
-![](https://i.gyazo.com/e385d95e983265ee3bb58af2b794599e.png)
-
-
+``` java
+boolean p = true;
+boolean q = false;
+boolean result = p && q;
+System.out.println("Result: " + result);
+```
 **Logical OR (||)**
-
-![](https://i.gyazo.com/aafd05a89edd6ebbc61fce0bae37e0ed.png)
+``` java
+boolean p = true;
+boolean q = false;
+boolean result = p || q;
+System.out.println("Result: " + result);
+```
 
 # 🚀 Summary of Java Operators
 
