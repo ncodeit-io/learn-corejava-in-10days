@@ -1,11 +1,7 @@
 # 🎉 Collection Framework in Java 🎉
+![Collection Framework - Class Hierarchy](https://i0.wp.com/javaconceptoftheday.com/wp-content/uploads/2014/11/CollectionHierarchy.png?w=1300)
 
 The Collection Framework in Java is a **🔑 fundamental 🔑** part of the Java language that allows developers to efficiently organize and manipulate groups of related objects. 😍
-
-
-![](https://i.gyazo.com/2bc298eb96047e79acf2436387097bd3.png)
-
-
 
 ## 🌟 Collections Hierarchy 🌟
 
@@ -48,8 +44,20 @@ To create a Collection, you can use any of the Collection classes provided in Ja
 **java code**
 
 
-![](https://i.gyazo.com/41f10a2572a72fc9cd6a69e92d484eee.png)
+``` java
+import java.util.ArrayList;
 
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<>();
+        names.add("John");
+        names.add("Doe");
+        names.add("Smith");
+
+        System.out.println(names);
+    }
+}
+```
 
 In this example, we imported the ArrayList class and created an ArrayList of Strings called `names`. We added three names to the list and printed out the contents of the list using `System.out.println()`.
 
@@ -59,7 +67,20 @@ To iterate over the elements of a Collection, you can use a for-each loop. Here'
 
 **java code**
 
-![](https://i.gyazo.com/9c3feb06a3a2a6350eeb9f7d1a606b5c.png)
+``` java
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<>();
+        names.add("John");
+        names.add("Doe");
+        names.add("Smith");
+
+        System.out.println(names);
+    }
+}
+```
  
 
 In this example, we used a for-each loop to iterate over the elements in the `names` ArrayList and print out each name to the console.
@@ -70,8 +91,22 @@ To remove an element from a Collection, you can use the `remove()` method. Here'
 
 **java code**
 
-![](https://i.gyazo.com/a056ac3a55c374f1db611874e623f69f.png)
+``` java
+import java.util.ArrayList;
 
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<>();
+        names.add("John");
+        names.add("Doe");
+        names.add("Smith");
+
+        names.remove("Doe");
+
+        System.out.println(names);
+    }
+}
+```
 
 
 In this example, we used the `remove()` method to remove the name "Bob" from the `names` ArrayList.
@@ -81,6 +116,8 @@ In this example, we used the `remove()` method to remove the name "Bob" from the
 In conclusion, Collections in Java provide a powerful and flexible way to organize and manipulate groups of related objects. By using the Collection classes provided in Java, you can easily create, iterate over, and modify Collections to suit your needs. So start using Collections in your Java code today and make your code more organized and efficient! 🚀
 
 # 🎉 Set in Java 🎉
+
+![Java 8 - Sets in Java and how to use them](https://java8.info/images/sethierarchy.jpg)
 
 In Java, a Set 🃏 is a collection that contains no duplicate elements. It provides several methods for adding, removing, and checking the contents of the Set 🕵️‍♀️.
 
@@ -95,7 +132,21 @@ To create a Set, you can use any of the Set classes provided in Java. Here's an 
 **java code**
 
 
-![](https://i.gyazo.com/9e088a782325fc75c5ed324e5f3da0d0.png)
+``` java
+import java.util.HashSet;
+import java.util.Set;
+
+public class Main {
+    public static void main(String[] args) {
+        Set<String> names = new HashSet<>();
+        names.add("John");
+        names.add("Doe");
+        names.add("Smith");
+
+        System.out.println(names);
+    }
+}
+```
 
 
 
@@ -107,7 +158,25 @@ To check if an element is in a Set, you can use the `contains()` method. Here's 
 
 **java code**
 
-![](https://i.gyazo.com/d2a7bd4d112e747e05272e5e7833adcd.png)
+``` java
+import java.util.HashSet;
+import java.util.Set;
+
+public class Main {
+    public static void main(String[] args) {
+        Set<String> names = new HashSet<>();
+        names.add("John");
+        names.add("Doe");
+        names.add("Smith");
+
+        if (names.contains("Bob")) {
+            System.out.println("🎉 Bob is in the set!");
+        } else {
+            System.out.println("😢 Bob is not in the set.");
+        }
+    }
+}
+```
 
 
 In this example, we used the `contains()` method to check if the name "Bob" is in the `names` HashSet. If it is, we printed out "🎉 Bob is in the set!" to the console. If it is not, we printed out "😢 Bob is not in the set.".
@@ -118,7 +187,23 @@ To remove an element from a Set, you can use the `remove()` method. Here's an ex
 
 **java code**
 
-![](https://i.gyazo.com/3d1b4333837841922d82e98f83968133.png)
+``` java
+import java.util.HashSet;
+import java.util.Set;
+
+public class Main {
+    public static void main(String[] args) {
+        Set<String> names = new HashSet<>();
+        names.add("John");
+        names.add("Doe");
+        names.add("Smith");
+
+        names.remove("Smith");
+
+        System.out.println(names);
+    }
+}
+```
 
 
 In this example, we used the `remove()` method to remove the name "Charlie" from the `names` HashSet.
@@ -128,6 +213,8 @@ In this example, we used the `remove()` method to remove the name "Charlie" from
 In conclusion, Sets in Java provide a powerful and efficient way to store and manipulate groups of related objects with no duplicates. By using the Set classes provided in Java, you can easily create, check, and modify Sets to suit your needs. So start using Sets in your Java code today and make your code more organized and efficient! 🚀
 
 # 📜 List in Java 📜
+
+![Java List - List in Java | Scaler Topics](https://www.scaler.com/topics/images/list-and-its-use-cases_thumbnail.webp)
 
 In Java, a List 📜 is an ordered collection, sometimes called a sequence. It allows duplicates and provides several methods for adding, removing, and accessing the contents of the List 📝.
 
@@ -142,8 +229,21 @@ To create a List, you can use any of the List classes provided in Java. Here's a
 **java code**
 
 
-![](https://i.gyazo.com/c2979413ae611c679d749a629a220562.png)
+``` java
+import java.util.ArrayList;
+import java.util.List;
 
+public class Main {
+    public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+        names.add("John");
+        names.add("Doe");
+        names.add("Smith");
+
+        System.out.println(names);
+    }
+}
+```
 
 In this example, we imported the ArrayList class and created an ArrayList of Strings called `names`. We added three names to the List and printed out the contents of the List using `System.out.println()`.
 
@@ -153,9 +253,22 @@ To access an element in a List, you can use the `get()` method. Here's an exampl
 
 **java code**
 
-![](https://i.gyazo.com/dda716f98ededa8cd7715a2e17739cb8.png)
+``` java
+import java.util.ArrayList;
+import java.util.List;
 
+public class Main {
+    public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+        names.add("John");
+        names.add("Doe");
+        names.add("Smith");
 
+        String secondName = names.get(1);
+        System.out.println("Hello, " + secondName + "!");
+    }
+}
+```
 
 In this example, we used the `get()` method to access the second element in the `names` ArrayList (which is "Bob"). We then printed out a friendly greeting to Bob using `System.out.println()`.
 
@@ -165,7 +278,23 @@ To remove an element from a List, you can use the `remove()` method. Here's an e
 
 **java code**
 
-![](https://i.gyazo.com/74e39d8431900509528adb1e4bab5f75.png)
+``` java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+        names.add("John");
+        names.add("Doe");
+        names.add("Smith");
+
+        names.remove("Smith");
+
+        System.out.println(names);
+    }
+}
+```
 
 
 In this example, we used the `remove()` method to remove the name "Charlie" from the `names` ArrayList.
@@ -175,6 +304,8 @@ In this example, we used the `remove()` method to remove the name "Charlie" from
 In conclusion, Lists in Java provide a flexible and versatile way to store and manipulate sequences of related objects. By using the List classes provided in Java, you can easily create, access, and modify Lists to suit your needs. So start using Lists in your Java code today and make your code more organized and efficient! 🚀
 
 # 🚶‍♂️ Queue in Java 🚶‍♀️
+
+![Java Queue | PriorityQueue | ArrayDeque - java4coding](https://www.java4coding.com/contents/java/images/java-queue-0.png)
 
 In Java, a Queue 🚶‍♂️ is a collection that is used to hold elements prior to processing. It follows the FIFO (First-In-First-Out) principle, meaning that the element that is added first is the one that will be removed first.
 
@@ -189,12 +320,24 @@ To create a Queue, you can use any of the Queue classes provided in Java. Here's
 **java code**
 
 
-![](https://i.gyazo.com/ae732f2a65428b6247651c3f798b38ff.png)
+``` java
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Main {
+    public static void main(String[] args) {
+        Queue<String> queue = new LinkedList<>();
+        queue.add("Alice");
+        queue.add("Bob");
+        queue.add("Charlie");
+
+        System.out.println(queue);
+    }
+}
+```
 
 
-In this example, we imported the LinkedList class and created a LinkedList of Strings called `queue`. We added three names to the Queue and printed out the contents of the Queue using 
-
-![](https://i.gyazo.com/86b8d99bf261d56c373811f3464950b5.png)
+In this example, we imported the LinkedList class and created a LinkedList of Strings called `queue`.
 
 
 ### Removing Elements from a Queue
@@ -203,8 +346,26 @@ To remove an element from a Queue, you can use the `remove()` or `poll()` method
 
 **java code**
 
-![](https://i.gyazo.com/a8a8e5f99bdb1409024519d75329ecb9.png)
+``` java
+import java.util.LinkedList;
+import java.util.Queue;
 
+public class Main {
+    public static void main(String[] args) {
+        Queue<String> queue = new LinkedList<>();
+        queue.add("Alice");
+        queue.add("Bob");
+        queue.add("Charlie");
+
+        String removedElement = queue.remove();
+        System.out.println("Hello, " + removedElement + "!");
+
+        // Alternatively, you can use the poll() method
+        // String removedElement = queue.poll();
+        // System.out.println("Hello, " + removedElement + "!");
+    }
+}
+```
 
 In this example, we used the `remove()` method to remove the first element in the `queue` LinkedList (which is "Alice"). We then printed out a friendly greeting to Alice using `System.out.println()`.
 
@@ -229,7 +390,21 @@ To create a Deque, you can use any of the Deque classes provided in Java. Here's
 **java code**
 
 
-![](https://i.gyazo.com/199e1c94cdf0ee660a0195fedc0f6cb7.png)
+``` java
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Main {
+    public static void main(String[] args) {
+        Deque<String> deque = new ArrayDeque<>();
+        deque.addFirst("Alice");
+        deque.addLast("Bob");
+        deque.addLast("Charlie");
+
+        System.out.println(deque);
+    }
+}
+```
 
 
 In this example, we imported the ArrayDeque class and created an ArrayDeque of Strings called `deque`. We added three names to the Deque using the `addFirst()` and `addLast()` methods, and printed out the contents of the Deque using `System.out.println()`.
@@ -240,7 +415,26 @@ To remove an element from a Deque, you can use the `removeFirst()` or `removeLas
 
 **java code**
 
-![](https://i.gyazo.com/cb77bdd46ecb142e1ed0701b16e8c62f.png)
+``` java
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Main {
+    public static void main(String[] args) {
+        Deque<String> deque = new ArrayDeque<>();
+        deque.addFirst("Alice");
+        deque.addLast("Bob");
+        deque.addLast("Charlie");
+
+        System.out.println("Deque: " + deque);
+
+        String removed = deque.removeFirst();
+        System.out.println("Removed from Deque: " + removed);
+
+        System.out.println("Updated Deque: " + deque);
+    }
+}
+```
 
 
 In this example, we used the `removeFirst()` method to remove the first element in the `deque` ArrayDeque (which is "Alice"). We then printed out a friendly greeting to Alice using `System.out.println()`.
@@ -250,6 +444,7 @@ In this example, we used the `removeFirst()` method to remove the first element 
 In conclusion, Deques in Java provide a way to manage elements in a double-ended queue. By using the Deque classes provided in Java, you can easily create, access, and remove elements from the Deque to suit your needs. So start using Deques in your Java code today and make your code more versatile! 🚪
 
 # Maps in Java 🗺️
+![Java Collection Framework - The Map Interface](https://i0.wp.com/javaconceptoftheday.com/wp-content/uploads/2015/01/MapInterface.png?w=1300)
 
 Maps in Java are a collection of key-value pairs, where each key is unique and maps to a corresponding value. Java provides several implementations of the Map interface, including HashMap, TreeMap, LinkedHashMap, and ConcurrentHashMap. Maps are used to store and manipulate data in a way that allows for efficient lookup and retrieval of values based on their associated keys.
 
@@ -260,7 +455,24 @@ HashMap is an implementation of the Map interface in Java that uses a hash table
 **java code**
 
 
-![](https://i.gyazo.com/2397b889a78552ee656b5474d01b1114.png)
+``` java
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        Map<String, Integer> ageMap = new HashMap<>();
+        ageMap.put("Alice", 30);
+        ageMap.put("Bob", 25);
+        ageMap.put("Charlie", 35);
+
+        // Print all key-value pairs
+        for (Map.Entry<String, Integer> entry : ageMap.entrySet()) {
+            System.out.println("Name: " + entry.getKey() + ", Age: " + entry.getValue());
+        }
+    }
+}
+```
 
 In this example, we create a new HashMap object called `ageMap` that maps strings (names) to integers (ages). We add three key-value pairs to the map using the `put` method, and then retrieve and print the ages of each person using the `get` method.
 
@@ -271,7 +483,24 @@ TreeMap is another implementation of the Map interface in Java that uses a red-b
 **java code**
 
 
-![](https://i.gyazo.com/36e9927f75624bd9d8b7f9165775126b.png)
+``` java
+import java.util.Map;
+import java.util.TreeMap;
+
+public class TreeMapExample {
+    public static void main(String[] args) {
+        Map<String, Integer> ageMap = new TreeMap<>();
+        ageMap.put("Alice", 30);
+        ageMap.put("Bob", 25);
+        ageMap.put("Charlie", 35);
+
+        // Print all key-value pairs
+        for (Map.Entry<String, Integer> entry : ageMap.entrySet()) {
+            System.out.println("Name: " + entry.getKey() + ", Age: " + entry.getValue());
+        }
+    }
+}
+```
 
 
 In this example, we create a new TreeMap object called `ageMap` that maps strings (names) to integers (ages). We add three key-value pairs to the map using the `put` method, and then retrieve and print the ages of each person using the `get` method. The elements are automatically sorted in ascending order based on the keys.
@@ -283,7 +512,24 @@ LinkedHashMap is another implementation of the Map interface in Java that mainta
 **java code**
 
 
-![](https://i.gyazo.com/cc2fe5b9c005a3fc45b7d4adf68d6a51.png)
+``` java
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class LinkedHashMapExample {
+    public static void main(String[] args) {
+        Map<String, Integer> ageMap = new LinkedHashMap<>();
+        ageMap.put("Alice", 30);
+        ageMap.put("Bob", 25);
+        ageMap.put("Charlie", 35);
+
+        // Print all key-value pairs
+        for (Map.Entry<String, Integer> entry : ageMap.entrySet()) {
+            System.out.println("Name: " + entry.getKey() + ", Age: " + entry.getValue());
+        }
+    }
+}
+```
 
 
         
