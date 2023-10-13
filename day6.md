@@ -1,4 +1,5 @@
 # 🚨 Exception Handling in Java 🚨
+![Exception Handling in Java: Everything That You Need to Know in 8 Simple  Steps | UNext](https://u-next.com/wp-content/uploads/2023/03/Untitled-design-2.webp)
 
 As a Java developer, it's important to know how to handle exceptions that can occur during the execution of your code. Exceptions can be caused by a variety of reasons such as incorrect input, network issues, or unexpected behavior.
 
@@ -18,7 +19,17 @@ In Java, you can handle exceptions using a try-catch block. Here's the basic syn
 
 **java code**
 
-![](https://i.gyazo.com/1eb6903a2537d8283b1d127a7c332f0c.png)
+``` java
+try {
+    // Code that may throw an exception
+} catch (ExceptionType1 e1) {
+    // Handle ExceptionType1
+} catch (ExceptionType2 e2) {
+    // Handle ExceptionType2
+} finally {
+    // Code to be executed regardless of whether an exception is thrown or not
+}
+```
  
 
 ### 🛠️ Example 🛠️
@@ -27,8 +38,28 @@ Let's say you're writing a program that reads a file and you want to handle the 
 
 **java code**
 
-![](https://i.gyazo.com/16ba5d478551228b8d83b58ddc1cafcd.png)
-` 
+``` java
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            File myFile = new File("filename.txt");
+            Scanner myReader = new Scanner(myFile);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                System.out.println(data);
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 ### 🚀 Conclusion 🚀
 
@@ -50,7 +81,21 @@ Checked exceptions are the exceptions that are checked at compile-time. If a met
 
 **java code**
 
-![](https://i.gyazo.com/db2419beee5d06f704ef98e05e834858.png)
+``` java
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            FileReader file = new FileReader("file.txt");
+            // Code to read from the file
+        } catch (IOException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
+    }
+}
+```
 
 
 ### 💻 Unchecked Exceptions 💻
@@ -61,7 +106,18 @@ Unchecked exceptions are the exceptions that are not checked at compile-time. Th
 
 **java code**
 
-![](https://i.gyazo.com/0d6ed2c010ec5b4ea567a594461ece11.png)
+``` java
+public class Main {
+    public static void main(String[] args) {
+        int num1 = 10, num2 = 0;
+        try {
+            int result = num1 / num2; // This line will throw an ArithmeticException
+        } catch (ArithmeticException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
+    }
+}
+```
 
 
 ### 💻 Errors 💻
@@ -72,8 +128,22 @@ Errors are exceptional conditions that are caused by the environment in which th
 
 **java code**
 
-![](https://i.gyazo.com/8e4a2543a02ca441288c74d92fa0f849.png)
+``` java
+public class Main {
+    public static void main(String[] args) {
+        try {
+            recursiveMethod(1);
+        } catch (StackOverflowError e) {
+            System.out.println("Stack overflow error occurred: " + e.getMessage());
+        }
+    }
 
+    public static void recursiveMethod(int i) {
+        System.out.println(i);
+        recursiveMethod(i + 1);
+    }
+}
+```
 
 ### 🚀 Conclusion 🚀
 
@@ -94,7 +164,22 @@ One way to handle exceptions in Java is by using try-catch blocks. A try block c
 
 **java code**
 
-![](https://i.gyazo.com/205510d0636ca791e728a8e79a54d8d2.png)
+``` java
+try {
+    // block of code to monitor for errors
+    // code that may throw an exception
+} catch (ExceptionType1 e1) {
+    // exception handler for ExceptionType1
+    // code to handle the exception
+} catch (ExceptionType2 e2) {
+    // exception handler for ExceptionType2
+    // code to handle the exception
+} finally {
+    // block of code that always executes
+    // regardless of whether an exception occurred
+    // optional - used for cleanup or other tasks
+}
+```
 
 
 ### 🛠️ Example 🛠️
@@ -104,7 +189,28 @@ Let's say you're writing a program that reads a file and you want to handle the 
 **java code**
 
 
-![](https://i.gyazo.com/d54309e4ba08ac078c25770902bce8e8.png)
+``` java
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            File myFile = new File("filename.txt");
+            Scanner myReader = new Scanner(myFile);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                System.out.println(data);
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 
 
@@ -114,8 +220,22 @@ Another way to handle exceptions in Java is by using a finally block. A finally 
 
 **java code**
 
-![](https://i.gyazo.com/2310760170235af9567a91bb698b0eb8.png)
-
+``` java
+try {
+    // block of code to monitor for errors
+    // code that may throw an exception
+} catch (ExceptionType1 e1) {
+    // exception handler for ExceptionType1
+    // code to handle the exception
+} catch (ExceptionType2 e2) {
+    // exception handler for ExceptionType2
+    // code to handle the exception
+} finally {
+    // block of code that always executes
+    // regardless of whether an exception occurred
+    // optional - used for cleanup or other tasks
+}
+```
 
 
 ### 🛠️ Example 🛠️
@@ -124,7 +244,36 @@ Let's say you're writing a program that opens a database connection and you want
 
 **java code**
 
-![](https://i.gyazo.com/bddc9c77b10f0795ceeb5c525a44ca1c.png)
+``` java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Main {
+    public static void main(String[] args) {
+        Connection connection = null;
+        try {
+            String url = "jdbc:mysql://localhost:3306/mydatabase";
+            String username = "root";
+            String password = "password";
+            connection = DriverManager.getConnection(url, username, password);
+            // Perform database operations
+        } catch (SQLException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                System.out.println("An error occurred while closing the connection: " + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+    }
+}
+```
 
  
 
@@ -142,7 +291,14 @@ To create a custom exception class in Java, you need to extend the `Exception` c
 
 **java code**
 
-![](https://i.gyazo.com/e2a24615b8235328e63476619ca40fb6.png)
+``` java
+public class CustomException extends Exception {
+    // constructor that takes a string message
+    public CustomException(String message) {
+        super(message);
+    }
+}
+```
 
 
 ### 🛠️ Example 🛠️
@@ -151,7 +307,13 @@ Let's say you're writing a program that calculates the area of a rectangle. You 
 
 **java code**
 
-![](https://i.gyazo.com/adf21ff63fd41af5a89ecf54e47c92f2.png)
+``` java
+public class NegativeDimensionException extends Exception {
+    public NegativeDimensionException(String message) {
+        super(message);
+    }
+}
+```
 
 
 Now you can use this custom exception class in your program, like this:
@@ -159,7 +321,11 @@ Now you can use this custom exception class in your program, like this:
 **java code**
 
 
-![](https://i.gyazo.com/41eece894118c288c4e1f750528d543e.png)
+``` java
+if (length < 0 || width < 0) {
+    throw new NegativeDimensionException("Dimensions cannot be negative");
+}
+```
 
  
 
@@ -169,7 +335,14 @@ You can also create custom exception classes by extending the `RuntimeException`
 
 **java code**
 
-![](https://i.gyazo.com/5e38bc71528713cb84b7755b3d70901f.png)
+``` java
+public class CustomRuntimeException extends RuntimeException {
+    // constructor that takes a string message
+    public CustomRuntimeException(String message) {
+        super(message);
+    }
+}
+```
 
 
 ### 🛠️ Example 🛠️
@@ -178,15 +351,24 @@ Let's say you're writing a program that divides two numbers. You want to create 
 
 **java code**
 
-![](https://i.gyazo.com/7c2c1d0e2edc5a3d4dc9db6990307b62.png)
+``` java
+public class DivideByZeroException extends RuntimeException {
+    public DivideByZeroException(String message) {
+        super(message);
+    }
+}
+```
 
 
 Now you can use this custom runtime exception class in your program, like this:
 
 **java code**
 
-![](https://i.gyazo.com/36f468831517d2a260d3d22014761d7d.png)
-
+``` java
+if (divisor == 0) {
+    throw new DivideByZeroException("Cannot divide by zero");
+}
+```
  
 
 ### 🚀 Conclusion 🚀
