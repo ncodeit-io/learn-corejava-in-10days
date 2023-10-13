@@ -14,7 +14,28 @@ In Java, you can create threads by extending the `Thread` class or implementing 
 
 **java code**
 
-![](https://i.gyazo.com/7d16cccba243b39ad3c3419ce954e1ef.png)
+``` java
+class MyThread extends Thread {
+    public void run() {
+        // Code that represents the task the thread will execute
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Thread running: " + i);
+            try {
+                Thread.sleep(1000); // Sleep for 1 second
+            } catch (InterruptedException e) {
+                System.out.println("Thread interrupted");
+            }
+        }
+    }
+}
+
+public class MultithreadingExample {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread(); // Create a new thread
+        t1.start(); // Start the thread
+    }
+}
+```
 
 
 
@@ -31,6 +52,7 @@ Multithreading can introduce a new set of bugs and issues that are not present i
 Multithreading in Java is a powerful feature that can help you write more efficient and responsive code. By understanding the basics of multithreading and writing thread-safe code, you can take advantage of this feature and create amazing programs. 👍
 
 # 🕸️ Threads in Java - Creating and Managing Threads 🕸️
+![Lifecycle and States of a Thread in Java - GeeksforGeeks](https://media.geeksforgeeks.org/wp-content/uploads/20230620182419/Lifecycle-and-States-of-a-Thread-in-Java-768.png)
 
 Threads in Java allow us to write programs that can execute multiple tasks simultaneously. 🚀 In this guide, we'll explore how to create and manage threads in Java, so that you can take advantage of this powerful feature.
 
@@ -41,15 +63,25 @@ In Java, you can create threads by extending the `Thread` class or by implementi
 **java code**
 
 
-![](https://i.gyazo.com/1812650cef2adcf380b2694065249f8c.png)
+``` java
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread using Thread class");
+    }
+}
+```
 
 
 And here's an example of creating a thread by implementing the `Runnable` interface:
 
 **java code**
-
-
-![](https://i.gyazo.com/05313196c9b83e3875a6f2178a53f964.png)
+``` java
+class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Thread using Runnable interface");
+    }
+}
+```
 
 
 ## 🧵 Managing Threads
@@ -64,7 +96,13 @@ Here's an example of using the `sleep()` method to pause a thread for 1 second:
 
 **java code**
 
-![](https://i.gyazo.com/bdd5edfba5f807102ff790b7a53b0000.png)
+``` java
+try {
+    Thread.sleep(1000); // Pauses the current thread for 1000 milliseconds (1 second)
+} catch (InterruptedException e) {
+    // Handle the exception
+}
+```
 
 
 And here's an example of using the `join()` method to wait for a thread to finish executing:
@@ -72,7 +110,13 @@ And here's an example of using the `join()` method to wait for a thread to finis
 **java code**
 
 
-![](https://i.gyazo.com/b1afc071d3acbc79f4f258c50e7defdf.png)
+``` java
+try {
+    thread.join(); // Waits for 'thread' to finish executing before continuing
+} catch (InterruptedException e) {
+    // Handle the exception
+}
+```
 
 
 ## 🌟 Conclusion
@@ -80,6 +124,7 @@ And here's an example of using the `join()` method to wait for a thread to finis
 Creating and managing threads in Java can be a powerful tool for writing efficient and responsive programs. By understanding how to create threads and how to manage them using methods like `start()`, `sleep()`, and `join()`, you can take advantage of this feature and create amazing programs. 👍
 
 # 🚦 Using Synchronization to Prevent Race Conditions in Java 🚦
+![Race Condition in Operating Systems (OS) - javatpoint](https://static.javatpoint.com/operating-system/images/race-condition-in-operating-system.png)
 
 In Java, when multiple threads access a shared resource concurrently, it can result in race conditions, which can lead to unpredictable behavior and bugs. 😱 To prevent these issues, we can use synchronization, which ensures that only one thread can access the shared resource at a time.
 
@@ -90,11 +135,49 @@ Synchronization in Java is the process of controlling the access of multiple thr
 Here's an example of using synchronization to prevent race conditions:
 
 **java code**
+``` java
+class Counter {
+    private int count = 0;
 
+    public synchronized void increment() {
+        count++;
+    }
 
-![](https://i.gyazo.com/78b04611087c626270c177a4dfd0b92f.png)
+    public int getCount() {
+        return count;
+    }
+}
 
-![](https://i.gyazo.com/f7b1cd39b2e154d11d35fed0bdb4509a.png)
+class Worker extends Thread {
+    private Counter counter;
+
+    public Worker(Counter counter) {
+        this.counter = counter;
+    }
+
+    public void run() {
+        for (int i = 0; i < 1000; i++) {
+            counter.increment();
+        }
+    }
+}
+
+public class SynchronizationExample {
+    public static void main(String[] args) throws InterruptedException {
+        Counter counter = new Counter();
+        Worker worker1 = new Worker(counter);
+        Worker worker2 = new Worker(counter);
+
+        worker1.start();
+        worker2.start();
+
+        worker1.join();
+        worker2.join();
+
+        System.out.println("Final count: " + counter.getCount());
+    }
+}
+```
 
 In this example, we have a `counter` variable that is incremented by two threads concurrently. Without synchronization, the final value of `counter` can be unpredictable. By using the `synchronized` keyword on the `run()` method, we ensure that only one thread can access the block of code that increments `counter` at a time, preventing race conditions.
 
@@ -103,6 +186,7 @@ In this example, we have a `counter` variable that is incremented by two threads
 Synchronization is an important tool for preventing race conditions in multithreaded Java programs. By using the `synchronized` keyword, we can ensure that only one thread can access a shared resource at a time, preventing bugs and unpredictable behavior. 👍
 
 # 🧵 Building Multithreaded Applications in Java 🧵
+![Javarevisited: How Thread, Code and Data Works in Multi-threading Program  in Java?](https://3.bp.blogspot.com/-LSQA49XXSpo/XGAAIwULEHI/AAAAAAAANMo/JhS3TgNbK5gUbONrMh1LhPvNosE_oT7jgCLcBGAs/w1200-h630-p-k-no-nu/How%2Bto%2Bwrite%2Bfaster%2Bcode%2Busing%2Bmultithreading%2Bin%2BJava.png)
 
 Multithreading in Java allows us to write programs that can execute multiple tasks simultaneously, which can greatly improve performance and responsiveness. 🚀 In this guide, we'll explore how to build multithreaded applications in Java, so that you can take advantage of this powerful feature.
 
@@ -125,7 +209,40 @@ In Java, there are several ways to implement multithreaded applications, includi
 **java code**
 
 
-![](https://i.gyazo.com/c407b40d9c16d4cab58570ccfa4bc6c4.png)
+``` java
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+class Task implements Runnable {
+    private final int taskId;
+
+    public Task(int id) {
+        this.taskId = id;
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Task ID : " + taskId + " performed by " + Thread.currentThread().getName());
+    }
+}
+
+public class MultithreadedApplication {
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newFixedThreadPool(10);
+
+        for (int i = 0; i < 100; i++) {
+            Task task = new Task(i);
+            executor.execute(task);
+        }
+
+        executor.shutdown();
+        while (!executor.isTerminated()) {
+        }
+
+        System.out.println("All tasks are finished.");
+    }
+}
+```
 
 
 In this example, we create an `ExecutorService` with a fixed thread pool of 10 threads, and we submit 100 tasks to be executed concurrently. By using the `shutdown()` method and the `isTerminated()` method, we ensure that all tasks have completed before printing a message.
