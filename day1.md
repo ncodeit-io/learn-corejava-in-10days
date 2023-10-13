@@ -143,9 +143,30 @@ Under "System Variables", click on "New" and add the following variables:
 On Linux or macOS, open the terminal and edit the `~/.bash_profile` file by adding the following lines:
 
 **java code**
+```  java
+public class EnvironmentSetup {
+    public static void main(String[] args) {
+        // Set up environment variables for Java
+        // On Windows
+        System.out.println("On Windows:");
+        System.out.println("Once the installation is complete, you need to set up environment variables for Java. ");
+        System.out.println("On Windows, go to the Control Panel and search for 'Environment Variables'. ");
+        System.out.println("Click on 'Edit the system environment variables' and then click on 'Environment Variables' at the bottom of the window. ");
 
+        System.out.println("Under 'System Variables', click on 'New' and add the following variables:");
+        System.out.println("- Variable name: JAVA_HOME");
+        System.out.println("- Variable value: the path to the JDK installation directory, e.g., C:\\Program Files\\Java\\jdk-16.0.1");
+        System.out.println("- Variable name: Path");
+        System.out.println("- Variable value: %JAVA_HOME%\\bin");
 
-![](https://i.gyazo.com/691ed71391cc0843a7b1d234eb0de115.png)
+        // On Linux or macOS
+        System.out.println("On Linux or macOS:");
+        System.out.println("Open the terminal and edit the ~/.bash_profile file by adding the following lines:");
+
+        // Add instructions for Linux or macOS here
+    }
+}
+```
 
 
 
@@ -161,7 +182,25 @@ Once the IDE is installed, you need to configure it to use the Java SDK. Open th
 
 That's it! You should now be all set up to start coding in Java using your IDE of choice. Happy coding! 🎉
 
-![](https://i.gyazo.com/03de71e4a51b0826d49b5a05e699600e.png)
+``` java
+public class IDEConfiguration {
+    public static void main(String[] args) {
+        // Install an IDE
+        System.out.println("## Install an IDE");
+        System.out.println("An IDE (Integrated Development Environment) is a software application that provides a comprehensive environment for writing, testing, and debugging Java code. ");
+        System.out.println("There are several popular Java IDEs available, such as Eclipse, IntelliJ IDEA, and NetBeans.");
+        System.out.println("Choose one that suits your needs and download it from the respective website.");
+
+        // Configure the IDE
+        System.out.println("## Configure the IDE");
+        System.out.println("Once the IDE is installed, you need to configure it to use the Java SDK. Open the IDE and go to the preferences/settings menu.");
+        System.out.println("Find the Java SDK setting and set it to the JDK you installed earlier. ");
+        System.out.println("You can also configure other settings, such as code formatting, syntax highlighting, and debugging options, to suit your preferences.");
+        System.out.println("That's it! You should now be all set up to start coding in Java using your IDE of choice. Happy coding!");
+    }
+}
+```
+
 
 ## Summary 🚀
 
@@ -230,7 +269,14 @@ Let's learn how to write a simple but powerful program that has been a staple of
 
 ### 👨‍💻 Here's the Java code for the program:
 
-![](https://i.gyazo.com/cb0cc45734539434ecda0e5623825a95.png)
+``` java
+public class HelloWorld {
+    public static void main(String[] args) {
+        // Prints "Hello, World" to the terminal window.
+        System.out.println("Hello, World!");
+    }
+}
+```
 
 
 
@@ -244,7 +290,6 @@ Let's learn how to write a simple but powerful program that has been a staple of
 
 🚀 When you run this program, it will print **"Hello, world! 🌍"** to the console. That's all there is to it! 👍
 
-![](https://i.gyazo.com/5b55e2e1566785e216abd2d0235ebd80.png)
 
 
 
@@ -357,12 +402,21 @@ Java supports both single-line and multi-line comments. Single-line comments sta
 
 #### Example of Single-Line Comment:
 
-![image](https://user-images.githubusercontent.com/129722425/231368521-ca9a5233-7891-4fa0-8663-db65a20bd155.png)
+```
+// This is a single-line comment in Java. It is used to add notes or explanations to the code.
+int x = 5; // This line declares a variable 'x' and initializes it with the value 5.
+```
 
 #### Example of Multi-Line Comment:
 
-![image](https://user-images.githubusercontent.com/129722425/231368577-13bedf75-cbf2-4244-95db-c533cc9e2e9c.png)
-
+``` java
+/* 
+   This is an example of a multi-line comment in Java. 
+   Multi-line comments are useful when you want to add longer explanations 
+   or when you want to disable a block of code temporarily.
+*/
+int y = 10; // This line declares a variable 'y' and initializes it with the value 10.
+```
 
 ## 💻 Class Declaration:
 
@@ -370,9 +424,14 @@ In Java, everything is defined within classes. A class is a blueprint for an obj
 
 #### Example of Class Declaration:
 
-![image](https://user-images.githubusercontent.com/129722425/231368831-8198ab3e-03ef-4eea-8a54-63685d65829a.png)
+```
+public class MyClass {
+    // Class body where you define properties and methods
+}
+```
 
-In the above example, the "public" keyword specifies that the class is visible and accessible to other classes, and "MyClass" is the name of the class.
+
+In the example provided, the `public` keyword specifies that the class is accessible to other classes. `MyClass` is the name of the class, and within the class body, you can define properties and methods that represent the behavior and characteristics of the objects created from this class.
 
 
 ## 🚪 Main Method:
@@ -381,7 +440,17 @@ The main method is the entry point of a Java program. It is the first method tha
 
 #### Example of Main Method:
 
-![image](https://user-images.githubusercontent.com/129722425/231368953-c8bcc709-9dd4-43ae-968a-ad6d4e759abf.png)
+``` java
+public class Main {
+    public static void main(String[] args) {
+        // The main method is the entry point of the Java program.
+        System.out.println("This is the main method.");
+    }
+}
+```
+In this example, the `public` keyword denotes that the main method is accessible from outside the class. `static` indicates that the method is associated with the class rather than with any specific instance. `void` signifies that the main method does not return any value. The `main` method takes an array of strings `args` as an argument, which allows you to pass command-line arguments to the program.
+
+The `System.out.println` statement within the main method prints the text "This is the main method." to the console.
 
 
 
@@ -391,9 +460,26 @@ In Java, variables are used to store data or values. Variables can be of differe
 
 #### Example of Variables:
 
-![image](https://user-images.githubusercontent.com/129722425/231369106-06ef4999-7118-401c-94f8-8caf766e1181.png)
+``` java
+public class VariablesExample {
+    public static void main(String[] args) {
+        // Declaring and initializing variables
+        int number = 10;
+        double decimalNumber = 3.14;
+        boolean isTrue = true;
+        String text = "Hello, Java!";
+        
+        // Printing out the variables
+        System.out.println("Integer number: " + number);
+        System.out.println("Decimal number: " + decimalNumber);
+        System.out.println("Boolean value: " + isTrue);
+        System.out.println("String text: " + text);
+    }
+}
+```
 
-In the above example, "age" is an **integer variable,** "height" is a **double variable**, "isMarried" is a **boolean variable**, and "name" is a **String variable.**
+
+In this example, we declare and initialize variables of different types. We have an `int` variable `number`, a `double` variable `decimalNumber`, a `boolean` variable `isTrue`, and a `String` variable `text`. We then print out the values of these variables using the `System.out.println` statement.
 
 ## 🎲 Operators:
 
@@ -401,9 +487,72 @@ Java supports various types of operators, such as arithmetic, comparison, logica
 
 #### Example of Operators:
 
-![image](https://user-images.githubusercontent.com/129722425/231369223-11ba068a-b292-4b72-a67a-cc0d31d5f856.png)
+``` java
+public class OperatorsExample {
+    public static void main(String[] args) {
+        // Arithmetic operators
+        int a = 10, b = 20;
+        int sum = a + b;
+        int difference = b - a;
+        int product = a * b;
+        int division = b / a;
+        int modulus = b % a;
 
-In the above example, "z" is the sum of "x" and "y", "result" is false because "x" is not greater than "y", and "flag3" is false because "flag1 && flag2" is false.
+        // Comparison operators
+        boolean isEqual = (a == b);
+        boolean isNotEqual = (a != b);
+        boolean isGreater = (a > b);
+        boolean isLess = (a < b);
+        boolean isGreaterOrEqual = (a >= b);
+        boolean isLessOrEqual = (a <= b);
+
+        // Logical operators
+        boolean logicalAnd = (a < 20 && b > 10);
+        boolean logicalOr = (a < 5 || b > 15);
+        boolean logicalNot = !(a == b);
+
+        // Bitwise operators
+        int bitwiseAnd = a & b;
+        int bitwiseOr = a | b;
+        int bitwiseXor = a ^ b;
+        int bitwiseComplement = ~a;
+        int leftShift = a << 2;
+        int rightShift = a >> 2;
+
+        // Display the results
+        System.out.println("Arithmetic Operators:");
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + difference);
+        System.out.println("Product: " + product);
+        System.out.println("Division: " + division);
+        System.out.println("Modulus: " + modulus);
+
+        System.out.println("Comparison Operators:");
+        System.out.println("Is Equal: " + isEqual);
+        System.out.println("Is Not Equal: " + isNotEqual);
+        System.out.println("Is Greater: " + isGreater);
+        System.out.println("Is Less: " + isLess);
+        System.out.println("Is Greater Or Equal: " + isGreaterOrEqual);
+        System.out.println("Is Less Or Equal: " + isLessOrEqual);
+
+        System.out.println("Logical Operators:");
+        System.out.println("Logical AND: " + logicalAnd);
+        System.out.println("Logical OR: " + logicalOr);
+        System.out.println("Logical NOT: " + logicalNot);
+
+        System.out.println("Bitwise Operators:");
+        System.out.println("Bitwise AND: " + bitwiseAnd);
+        System.out.println("Bitwise OR: " + bitwiseOr);
+        System.out.println("Bitwise XOR: " + bitwiseXor);
+        System.out.println("Bitwise Complement: " + bitwiseComplement);
+        System.out.println("Left Shift: " + leftShift);
+        System.out.println("Right Shift: " + rightShift);
+    }
+}
+```
+
+
+This example demonstrates the usage of various arithmetic, comparison, logical, and bitwise operators in Java. 
 
 ## 🔧 Control Statements:
 
@@ -411,10 +560,61 @@ Java supports various types of control statements, such as if-else statements, f
 
 #### Example of Control Statements:
 
-![image](https://user-images.githubusercontent.com/129722425/231369391-c9a65897-55e4-45a0-b81b-2ae812b84086.png)
+``` java
+public class ControlStatementsExample {
+    public static void main(String[] args) {
+        // If-else statement
+        int x = 10;
+        if (x > 0) {
+            System.out.println("x is positive");
+        } else if (x < 0) {
+            System.out.println("x is negative");
+        } else {
+            System.out.println("x is zero");
+        }
+
+        // For loop
+        System.out.println("Printing numbers from 1 to 5:");
+        for (int i = 1; i <= 5; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        // While loop
+        System.out.println("Printing numbers from 5 to 1:");
+        int j = 5;
+        while (j >= 1) {
+            System.out.print(j + " ");
+            j--;
+        }
+        System.out.println();
+
+        // Switch statement
+        char grade = 'B';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+            case 'C':
+                System.out.println("Well done!");
+                break;
+            case 'D':
+                System.out.println("You passed!");
+                break;
+            case 'F':
+                System.out.println("Better try again");
+                break;
+            default:
+                System.out.println("Invalid grade");
+        }
+    }
+}
+```
 
 
-Java is a versatile programming language that offers a wide range of features for developing applications of different types. Whether you are a beginner or an experienced developer, Java has something to offer for everyone! 😎
+
+This example illustrates the use of if-else statements, for loops, while loops, and switch statements in Java. 😎
 
 ## 🔍Summary:
 💬 Comments are used to add notes or explanations to the code, while class declaration is used to define a blueprint for an object.
@@ -491,4 +691,4 @@ Answer: A
 
 Answer: A
 
-I hope you enjoyed testing your knowledge.
+I hope you enjoyed testing your knowledge. 😎
