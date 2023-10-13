@@ -1,5 +1,7 @@
 # 🚀 Introduction to Control Statements in Java 🚀
 
+![Control Structures in Java — Loops | by Nickson Joram | Javarevisited |  Medium](https://miro.medium.com/v2/resize:fit:1400/1*BENOXzD3k4_-nzgYEkyDTw.png)
+
 In Java, control statements are used to control the flow of program execution 🔀. Control statements allow programmers to create dynamic programs that can respond to changing conditions and make intelligent decisions based on data 🤖.
 
 There are three main categories of control statements in Java:
@@ -18,10 +20,12 @@ Jump statements are used to transfer control to a different part of the program 
 
 💡 By using control statements, programmers can write code that can respond to changing conditions and make intelligent decisions based on data. Control statements are a powerful feature of Java that allow programmers to create complex and dynamic programs. 🤖
 
-![](https://i.gyazo.com/eb5b9bda9f88496c720de11670899f5a.png)
+
 
 
 # 🚀 Implementing Conditional Statements in Java 🤖
+
+![Java If Statement Tutorial With Examples](https://www.softwaretestinghelp.com/wp-content/qa/uploads/2020/09/Java-if-else-if-ladder-2.png)
 
 In Java, conditional statements allow the program to make decisions based on certain conditions. These statements evaluate a Boolean expression and execute a certain block of code if the expression is true or false. 🤔
 
@@ -33,7 +37,13 @@ The `if` statement in Java evaluates a Boolean expression and executes a block o
 
 **java code**
 
-![](https://i.gyazo.com/6f2704c8961582d0d51efd14fdac186b.png)
+``` java
+// Example of the if statement
+int num = 10;
+if (num > 0) {
+    System.out.println("The number is positive");
+}
+```
 
 
 
@@ -42,7 +52,15 @@ The `if` statement in Java evaluates a Boolean expression and executes a block o
 **java code**
 
 
-![](https://i.gyazo.com/86a04c918d6723bc90ebd6c60ac7855c.png)
+``` java
+// Using the if statement to check if a number is even or odd
+int number = 10;
+if (number % 2 == 0) {
+    System.out.println("The number is even");
+} else {
+    System.out.println("The number is odd");
+}
+```
 
 
 
@@ -54,16 +72,42 @@ The `switch` statement in Java evaluates a variable or expression and executes a
 
 **java code**
 
-![](https://i.gyazo.com/59bb6e2f004552cf88123a738c0505fe.png)
-
+``` java
+// Example of the switch statement
+int day = 3;
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    // other cases
+    default:
+        System.out.println("Invalid day");
+}
+```
 
 👉 Here's an example of using the `switch` statement to print the name of a month based on its number:
 
 **java code**
 
 
-![](https://i.gyazo.com/fb58889e214550bbe62d7247760683c9.png)
-
+``` java
+// Using the switch statement to print the name of a month
+int monthNumber = 2;
+switch (monthNumber) {
+    case 1:
+        System.out.println("January");
+        break;
+    case 2:
+        System.out.println("February");
+        break;
+    // other cases
+    default:
+        System.out.println("Invalid month number");
+}
+```
 
 
 🔍 In this example, the program evaluates the value of `monthNumber` and prints the name of the corresponding month. If `monthNumber` does not match any of the cases, the program prints "Invalid month number". 💥
@@ -81,7 +125,14 @@ Here's the syntax for an If-else statement in Java:
 
 **java code**
 
-![](https://i.gyazo.com/869060ec4f8de4e08631e6800765b19d.png)
+``` java
+// Syntax for the if-else statement
+if (condition) {
+    // block of code to be executed if the condition is true
+} else {
+    // block of code to be executed if the condition is false
+}
+```
 
 
 ### 🎉 Example of If-else Statements in Java 🎉
@@ -91,7 +142,15 @@ Let's take a look at an example of an If-else statement in Java:
 **java code**
 
 
-![](https://i.gyazo.com/79b724ee20e152867e431207b1db03d4.png)
+``` java
+// Example of the if-else statement
+int num = 10;
+if (num > 0) {
+    System.out.println("The number is positive");
+} else {
+    System.out.println("The number is not positive");
+}
+```
 
 
 
@@ -103,7 +162,17 @@ You can also use multiple conditions in an If-else statement using the else-if s
 
 **java code**
 
-![](https://i.gyazo.com/b937cdd7f89d665e43a236a66793a69c.png)
+``` java
+// Using multiple conditions in an If-else statement
+int number = 10;
+if (number > 0) {
+    System.out.println("The number is positive.");
+} else if (number < 0) {
+    System.out.println("The number is negative.");
+} else {
+    System.out.println("The number is zero.");
+}
+```
 
 
 In this example, if the number is greater than zero, the program prints "The number is positive." If the number is less than zero, the program prints "The number is negative." If the number is equal to zero, the program prints "The number is zero." 🤩
@@ -114,7 +183,24 @@ Finally, you can also use nested If-else statements to create more complex condi
 
 **java code**
 
-![](https://i.gyazo.com/4feb7fa87c1f908a4e1dbf99131787b4.png)
+``` java
+// Using nested If-else statements
+int num = 10;
+if (num >= 0) {
+    if (num == 0) {
+        System.out.println("The number is zero.");
+    } else {
+        System.out.println("The number is positive.");
+        if (num % 2 == 0) {
+            System.out.println("The number is even.");
+        } else {
+            System.out.println("The number is odd.");
+        }
+    }
+} else {
+    System.out.println("The number is negative.");
+}
+```
 
 
 In this example, the program checks whether the number is positive, negative, or zero, and also checks whether the number is even or odd. The program then prints out a message indicating the result. 🤯
@@ -132,7 +218,22 @@ Imagine you're building a program that detects the color of an object. You can u
 **java code**
 
 
-![](https://i.gyazo.com/b041e8cc0622043e6dcee07e57172ad5.png)
+``` java
+// Color Detector Example
+int red = 255;
+int green = 0;
+int blue = 0;
+
+if (red == 255 && green == 0 && blue == 0) {
+    System.out.println("The color of the object is Red.");
+} else if (red == 0 && green == 255 && blue == 0) {
+    System.out.println("The color of the object is Green.");
+} else if (red == 0 && green == 0 && blue == 255) {
+    System.out.println("The color of the object is Blue.");
+} else {
+    System.out.println("The color of the object is not recognized.");
+}
+```
 
 
 
@@ -145,12 +246,25 @@ Another example of an If-else statement application is a traffic light simulator
 **java code**
 
 
-![](https://i.gyazo.com/c933105969d5a7c846c1cff953091e64.png)
+``` java
+// Traffic Light Simulator Example
+String color = "green";
+
+if (color.equals("red")) {
+    System.out.println("Stop!");
+} else if (color.equals("yellow")) {
+    System.out.println("Slow down.");
+} else if (color.equals("green")) {
+    System.out.println("Go!");
+} else {
+    System.out.println("Invalid color.");
+}
+```
 
 
 In this example, the program simulates the different states of a traffic light by checking the value of the `color` variable. If the value is "red", then the program prints "Stop!" If the value is "yellow", then the program prints "Slow down." If the value is "green", then the program prints "Go!" If the value is anything else, then the program prints "Invalid color." 🚥
 
-**🤩 Let's create a program that can help you decide what to wear based on the weather outside! ☀️🌦️❄️**
+## **🤩 Let's create a program that can help you decide what to wear based on the weather outside! ☀️🌦️❄️**
 
 ### 🌡️ Inputting the Temperature 🌡️
 
@@ -159,7 +273,19 @@ The first step is to ask the user to input the current temperature. We can use t
 **java code**
 
 
-![](https://i.gyazo.com/5965e2779bfd592f0b599ffba95239de.png)
+``` java
+// Inputting the Temperature
+import java.util.Scanner;
+
+public class ClothingSuggestion {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter the current temperature in Fahrenheit: ");
+        int temperature = scanner.nextInt();
+        // Rest of the code
+    }
+}
+```
 
 
 
@@ -169,7 +295,12 @@ Now that we have the temperature, we can use an If-else statement to decide what
 
 **java code**
 
-![](https://i.gyazo.com/bcca3e767fb021695360824596aa5018.png)
+``` java
+// Creating an If-else Statement for Hot Weather
+if (temperature >= 80) {
+    System.out.println("It's hot outside! Wear shorts and a t-shirt.");
+} 
+```
 
 
 If the temperature is 80 degrees Fahrenheit or higher, the program will print "It's hot outside! Wear shorts and a t-shirt." Otherwise, the program will move on to the next condition.
@@ -180,8 +311,12 @@ Next, let's create a condition for mild weather:
 
 **java code**
 
-![](https://i.gyazo.com/7af2da6ccdd649b77f2fd7b1fbaecca5.png)
-` 
+``` java
+// Creating an If-else Statement for Mild Weather
+else if (temperature >= 60 && temperature <= 79) {
+    System.out.println("It's mild outside! Wear a light jacket and jeans.");
+} 
+```
 
 If the temperature is between 60 and 79 degrees Fahrenheit, the program will print "It's mild outside! Wear a light jacket and jeans." Otherwise, the program will move on to the next condition.
 
@@ -191,7 +326,12 @@ Finally, let's create a condition for cold weather:
 
 **java code**
 
-![](https://i.gyazo.com/8cec136a1618fd403f1d19dc9d2a4a3f.png)
+``` java
+// Creating an If-else Statement for Cold Weather
+else if (temperature < 60) {
+    System.out.println("It's cold outside! Wear a coat, hat, and gloves.");
+} 
+```
 
 
 If the temperature is less than 60 degrees Fahrenheit, the program will print "It's cold outside! Wear a coat, hat, and gloves." Otherwise, the program will move on to the next condition.
@@ -202,7 +342,14 @@ We can also add a condition for extreme weather, such as a tornado or hurricane:
 
 **java code**
 
-![](https://i.gyazo.com/f607494db86f2e94e2c0ababb628a44f.png)
+``` java
+// Adding a Condition for Extreme Weather
+if (temperature >= 90) {
+    System.out.println("It's extremely hot outside! Stay indoors and drink water.");
+} else if (temperature < 20) {
+    System.out.println("It's extremely cold outside! Stay indoors and bundle up.");
+} 
+```
 
 
 If the temperature is 90 degrees Fahrenheit or higher, the program will print "It's extremely hot outside! Stay indoors and drink water." If the temperature is less than 20 degrees Fahrenheit, the program will print "It's extremely cold outside! Stay indoors and bundle up." Otherwise, the program will move on to the next step.
@@ -213,14 +360,33 @@ Finally, we can output a message to the user letting them know what to wear:
 
 **java code**
 
-![](https://i.gyazo.com/f5e9e82a3927b3052603fa621e019a59.png)
+``` java
+// Outputting the Final Result
+System.out.println("Enjoy your day!");
+scanner.close();
+```
 
 
 We can then add a print statement for each condition, depending on what the temperature is:
 
 **java code**
 
-![](https://i.gyazo.com/77f0277901824fea556f25843fdda2b0.png)
+``` java
+// Printing a message based on the condition
+if (temperature >= 90) {
+    System.out.println("It's extremely hot outside! Stay indoors and drink water.");
+} else if (temperature >= 80) {
+    System.out.println("It's hot outside! Wear shorts and a t-shirt.");
+} else if (temperature >= 60 && temperature <= 79) {
+    System.out.println("It's mild outside! Wear a light jacket and jeans.");
+} else if (temperature < 60 && temperature >= 20) {
+    System.out.println("It's cold outside! Wear a coat, hat, and gloves.");
+} else if (temperature < 20) {
+    System.out.println("It's extremely cold outside! Stay indoors and bundle up.");
+}
+```
+
+This code snippet prints a different message based on the temperature condition. If the temperature is extremely hot, it advises staying indoors and drinking water. For hot weather, it suggests wearing shorts and a t-shirt. For mild weather, it recommends a light jacket and jeans. For cold weather, it advises wearing a coat, hat, and gloves. If the temperature is extremely cold, it recommends staying indoors and bundling up.
 
 # 🌟 If-else Statements: A Brief Summary 🌟
 
@@ -236,7 +402,15 @@ The basic syntax of an If-else statement in Java is as follows:
 
 **java code**
 
-![](https://i.gyazo.com/b2642eaa12ca697eef8bc94c465ddcd7.png)
+``` java
+int num = 10;
+
+if(num > 0) {
+    System.out.println("The number is positive.");
+} else {
+    System.out.println("The number is not positive.");
+}
+```
 
 The `if` keyword is followed by a condition, which is usually a Boolean expression that evaluates to either `true` or `false`. If the condition is true, the code inside the first block of braces will be executed. If the condition is false, the code inside the second block of braces will be executed. 🧐
 
@@ -304,6 +478,7 @@ Which of the following is NOT a comparison operator in Java?
 Answer is **d. :**. The colon `:` is not a comparison operator in Java. The comparison operators in Java are `==` (equality), `!=` (inequality), `>` (greater than), `<` (less than), `>=` (greater than or equal to), and `<=` (less than or equal to). 
 
 #  loops in Java! 🚀
+![Loops in Java Explained - Shiksha Online](https://lh3.googleusercontent.com/ciw6Bcn98APVoP9fxhsjgHiknAQfnJr-5IQ-lTTLPth_HVIt5V60bzINZmbTjdsLdVvWkZmbJhTQoYenpBDOdGggG7Fybu1cTBc9hV1WBzR-DIKLmBDT3l02pCUqsiFD04vIpMrIqO_tclvaWA)
 
 Loops are an essential part of programming in Java. 🤖 They allow you to execute a block of code repeatedly until a certain condition is met. 🔁
 
@@ -337,28 +512,47 @@ So, whether you are a beginner or an experienced programmer, understanding loops
 
 **java code**
 
-![](https://i.gyazo.com/bbcc5d9ee4fec46fd239bdb128ef443a.png)
- 
+``` java
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+```
 
 This code initializes the variable `i` to 1, checks if `i` is less than or equal to 5, and increments `i` by 1 after each iteration. 
 The **output** of this code would be:
 
-![](https://i.gyazo.com/1c7ce73a7d7cf558ad6c1be1634a6d25.png)
- 
-
+``` mathematicia
+1 
+2 
+3 
+4 
+5
+```
 ## While Loop
 
 🔄 The while loop is used when you want to iterate over a block of code until a certain condition is met. Here's an example of a while loop that prints the numbers 1 through 5:
 
 **java code**
 
-![](https://i.gyazo.com/a008222fdb7ec044f9c611dbfa03fe12.png)
- 
+``` java
+int i = 1;
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+```
 
 This code initializes the variable `i` to 1, checks if `i` is less than or equal to 5, and increments `i` by 1 after each iteration. 
 The **output** of this code would be the same as the for loop:
+``` mathematicia
+1 
+2 
+3 
+4 
+5
+```
 
-![](https://i.gyazo.com/1c7ce73a7d7cf558ad6c1be1634a6d25.png)
+
 
 
 ## Do-While Loop
@@ -367,14 +561,25 @@ The **output** of this code would be the same as the for loop:
 
 **java code**
 
-![](https://i.gyazo.com/a1b4138045c5e1cff086f9d1984126f3.png)
+``` java 
+int i = 1;
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+```
 
 
 This code initializes the variable `i` to 1, executes the block of code once, checks if `i` is less than or equal to 5, and increments `i` by 1 after each iteration. 
 The **output** of this code would be the same as the previous two examples:
 
-
-![](https://i.gyazo.com/1c7ce73a7d7cf558ad6c1be1634a6d25.png)
+``` mathematicia
+1 
+2 
+3 
+4 
+5
+```
 
 
 By using loops in your Java code, you can simplify repetitive tasks and make your code more efficient. 💻 However, it's important to use loops carefully to avoid infinite loops or other errors that could crash your program. 😱
@@ -428,8 +633,14 @@ We can use a for loop to iterate from 1 to n and add each number to a variable t
 
 **java code**
 
-![](https://i.gyazo.com/a1d823c230eb8628cd0fe7f5f7e6ebff.png)
-` 
+``` java
+int n = 10;
+int sum = 0;
+for (int i = 1; i <= n; i++) {
+    sum += i;
+}
+System.out.println("Sum: " + sum);
+```
 
 ### 2. Checking if a number is prime:
 
@@ -437,7 +648,23 @@ We can use a while loop to iterate from 2 to n/2 and check if n is divisible by 
 
 **java code**
 
-![](https://i.gyazo.com/2bbc053319a070fef30e60477a6ad3b3.png)
+``` java
+int n = 17;
+boolean isPrime = true;
+int i = 2;
+while (i <= n / 2) {
+    if (n % i == 0) {
+        isPrime = false;
+        break;
+    }
+    i++;
+}
+if (isPrime) {
+    System.out.println(n + " is a prime number.");
+} else {
+    System.out.println(n + " is not a prime number.");
+}
+```
 
 
 ### 3. Reversing a string:
@@ -446,7 +673,14 @@ We can use a for loop to iterate from the end of the string to the beginning and
 
 **java code**
 
-![](https://i.gyazo.com/d1df58c9a1a2331194940c02c5dd317d.png)
+``` java
+String original = "hello";
+String reversed = "";
+for (int i = original.length() - 1; i >= 0; i--) {
+    reversed += original.charAt(i);
+}
+System.out.println("Reversed string: " + reversed);
+```
 
 
 ### 4. Printing numbers from 1 to n, but for multiples of 3, print "Fizz" and for multiples of 5, print "Buzz":
@@ -455,7 +689,20 @@ We can use a for loop to iterate from 1 to n and use an if-else statement to che
 
 **java code**
 
-![](https://i.gyazo.com/2b0ca86b31c57c238f7df331b3809c50.png)
+``` java
+int n = 20;
+for (int i = 1; i <= n; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+        System.out.println("FizzBuzz");
+    } else if (i % 3 == 0) {
+        System.out.println("Fizz");
+    } else if (i % 5 == 0) {
+        System.out.println("Buzz");
+    } else {
+        System.out.println(i);
+    }
+}
+```
 
 
 In conclusion, loops and conditional statements are powerful tools that can be used to solve a wide range of programming problems. By combining these tools with other programming concepts, such as arrays and functions, we can solve even more complex problems.
@@ -482,7 +729,18 @@ What will be the output of the following code?
 
 **java code**
 
-![](https://i.gyazo.com/d863a60335400917c675d94b46f16541.png)
+``` java
+public class Example {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+            if (i == 2) {
+                continue;
+            }
+            System.out.print(i + " ");
+        }
+    }
+}
+```
 
 
 - A. 0 1 2 3 4 
@@ -498,7 +756,16 @@ What will be the output of the following code?
 
 **java code**
 
-![](https://i.gyazo.com/bfc0257d53adb2a5083ea6d7daf3123a.png)
+``` java
+public class Test {
+    public static void main(String[] args) {
+        int i;
+        for (i = 0; i < 3; i++) {
+            System.out.print(i + " ");
+        }
+    }
+}
+```
 
 
 - A. 0 1 2 
@@ -530,7 +797,15 @@ What will be the output of the following code?
 
 **java code**
 
-![](https://i.gyazo.com/8b1337d250db28296ea5f91bfa62f3dc.png)
+``` java
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i += 2) {
+            System.out.print(i + " ");
+        }
+    }
+}
+```
  
 
 - A. 0 2 4 6 8 
