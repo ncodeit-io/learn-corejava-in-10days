@@ -35,6 +35,8 @@ With these OOP concepts, Java developers can write modular, scalable, and mainta
 
 # 🌟Encapsulation in Java🌟
 
+![Encapsulation in Java, Real Life Example of Encapsulation in Java](https://www.sitesbay.com/java/images/encapsulation-in-java.png)
+
 In object-oriented programming, Encapsulation is one of the fundamental concepts that helps developers to achieve data security and maintainability of their code.
 
 👉🏽Encapsulation is a mechanism that binds code and data together and keeps them safe from external interference.🔒
@@ -62,8 +64,32 @@ In this example, we will create a class called `Person` with private variables `
 **java code**
 
 
-![](https://i.gyazo.com/e3f2b4a869aadc9e777e49123bde4b07.png)
+``` java
+public class Person {
+    private String name;
+    private int age;
 
+    // Getter for name
+    public String getName() {
+        return name;
+    }
+
+    // Setter for name
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter for age
+    public int getAge() {
+        return age;
+    }
+
+    // Setter for age
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+```
 
 In this example, we are encapsulating the `name` and `age` variables using the `private` access modifier. We are providing access to these variables using public getter and setter methods.
 
@@ -76,7 +102,28 @@ In this example, we will use a constructor to encapsulate data in the `Person` c
 **java code**
 
 
-![](https://i.gyazo.com/3c6d56d5e33dfbeab85187d93ba6e84d.png)
+``` java
+public class Person {
+    private String name;
+    private int age;
+
+    // Constructor to set the name and age
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getter for name
+    public String getName() {
+        return name;
+    }
+
+    // Getter for age
+    public int getAge() {
+        return age;
+    }
+}
+```
 
 
 In this example, we are using a constructor to set the `name` and `age` variables. This approach ensures that the data is set when the object is created and cannot be modified externally.
@@ -84,6 +131,7 @@ In this example, we are using a constructor to set the `name` and `age` variable
 The `getName()` and `getAge()` methods are providing access to the data, but the data is still secure because it cannot be modified once the object is created.
 
 # 🚗 Classes and Objects 🛣️
+![Object oriented programming (OOP) in Python – Data stories](https://nonlineardata.com/wp-content/uploads/2020/11/Car_Class.png)
 
 In object-oriented programming, a class is like a blueprint 📝 for creating objects 🧩. It defines a set of attributes and methods that are common to all objects of that class.
 
@@ -95,25 +143,55 @@ Once we have defined a class, we can create objects of that class, which are als
 
 **java code**
 
-![](https://i.gyazo.com/d9c3ad8c9a3cb7efb5245d866a552d6d.png)
+``` java
+public class Car {
+    private String make;
+    private String model;
+    private int year;
 
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    public void start() {
+        System.out.println("The car has started.");
+    }
+
+    public void stop() {
+        System.out.println("The car has stopped.");
+    }
+}
+```
+``` java
+Car myCar = new Car("Toyota", "Camry", 2022);
+```
 
 We can then set the attributes of `myCar` using dot notation:
 
 **java code**
 
-![](https://i.gyazo.com/cd7c782ea922c5697f2a4554d8bd5f76.png)
+``` java
+myCar.make = "Ford";
+myCar.model = "Mustang";
+myCar.year = 2020;
+```
 
 We can also call methods on `myCar` using dot notation:
 
 **java code**
 
-![](https://i.gyazo.com/53d32ea3159e05778e57ce69a9abf5b5.png)
+``` java
+myCar.start();
+myCar.stop();
+```
 
 
 🎉 Classes and objects are essential concepts in object-oriented programming. They allow us to create code that is modular, reusable, and easier to maintain. By defining a class and creating objects of that class, we can create complex systems with many different types of objects that interact with each other in meaningful ways.
 
 # 🌟Inheritance in OOP with Java
+![OOPs: Inheritance and Polymorphism | by Mukesh Chaudhary | Medium](https://miro.medium.com/v2/resize:fit:904/1*rddNpQyOeBl_jQ3Rmet5dg.png)
 
 Inheritance is one of the 🗝️ key concepts in object-oriented programming. It allows you to create new classes based on existing classes, inheriting their attributes and methods. This can save you a lot of time and effort, as you can reuse code from existing classes rather than starting from scratch. 🙌
 
@@ -122,7 +200,31 @@ In Java, you can create a new class that inherits from an existing class using t
 **java code**
 
 
-![](https://i.gyazo.com/7aa58c6386fee32e230527ec676dd460.png)
+``` java
+public class Vehicle {
+    String make;
+    String model;
+    int year;
+    int miles;
+
+    public void drive() {
+        System.out.println("The vehicle is being driven.");
+    }
+
+    public void stop() {
+        System.out.println("The vehicle has stopped.");
+    }
+
+    public void accelerate() {
+        System.out.println("The vehicle is accelerating.");
+    }
+
+    public void decelerate() {
+        System.out.println("The vehicle is decelerating.");
+    }
+}
+```
+
 
 
 We can now create a new class called `Car` that inherits from `Vehicle`, adding its own attributes and methods: 🚘
@@ -130,7 +232,16 @@ We can now create a new class called `Car` that inherits from `Vehicle`, adding 
 **java code**
 
 
-![](https://i.gyazo.com/ab99438eb3496477c161e31210068fe0.png)
+``` java
+public class Car extends Vehicle {
+    int doors;
+    String color;
+
+    public void honk() {
+        System.out.println("The car is honking.");
+    }
+}
+```
 
 
 Here, the `Car` class extends the `Vehicle` class using the `extends` keyword. It adds two new attributes, `doors` and `color`, as well as a new method called `honk()`.
@@ -139,7 +250,15 @@ We can now create objects of the `Car` class just like we did with the `Vehicle`
 
 **java code**
 
-![](https://i.gyazo.com/12888aff47f609265675bdf5d9493025.png)
+``` java
+Car myCar = new Car();
+myCar.make = "Toyota";
+myCar.model = "Corolla";
+myCar.year = 2020;
+myCar.miles = 5000;
+myCar.doors = 4;
+myCar.color = "Red";
+```
 
 
 Here, we have created an object of the `Car` class called `myCar` and set its attributes using dot notation.
@@ -151,6 +270,7 @@ Inheritance is a powerful tool in object-oriented programming that allows you to
 I hope this helps! Let me know if you have any questions or need further clarification. 🤗
 
 # 🧬 Inheriting from base classes🐶🐾🦁🐯🦊
+![Inheritance in OOPs- Logicmojo](https://logicmojo.com/assets/dist/new_pages/images/inheritance-image.png)
 
 Inheritance is a 🔑 concept in object-oriented programming 🖥️ that allows you to create new classes 🆕 based on existing classes, inheriting their attributes and methods. In Java, you can use the 🤝 extends keyword to create a new class that inherits from an existing class.
 
@@ -159,7 +279,25 @@ For example, let's say we have a 🐕 base class called Animal with attributes n
 **java code**
 
 
-![](https://i.gyazo.com/54ec702e24638d5628af0bc0057cec4c.png)
+``` java
+public class Animal {
+    String name;
+    int age;
+    String species;
+
+    public void eat() {
+        System.out.println("The animal is eating.");
+    }
+
+    public void sleep() {
+        System.out.println("The animal is sleeping.");
+    }
+
+    public void makeSound() {
+        System.out.println("The animal is making a sound.");
+    }
+}
+```
 
 
 Here, the 🐶 Dog class extends the 🦁 Animal class using the 🔍 extends keyword. It adds two new attributes, breed and isTrained, as well as a new method called bark().
@@ -168,10 +306,27 @@ We can now create objects of the 🐶 Dog class just like we did with the 🦁 A
 
 **java code**
 
-![](https://i.gyazo.com/9a4d85a6e19c90613e8d262a70d095af.png)
+``` java
+public class Dog extends Animal {
+    String breed;
+    boolean isTrained;
 
+    public void bark() {
+        System.out.println("The dog is barking.");
+    }
+}
+```
 
 Here, we have created an object of the 🐶 Dog class called myDog and set its attributes using dot notation.
+
+``` java
+Dog myDog = new Dog();
+myDog.name = "Buddy";
+myDog.age = 3;
+myDog.species = "Canis lupus familiaris";
+myDog.breed = "Golden Retriever";
+myDog.isTrained = true;
+```
 
 Because 🐶 Dog inherits from 🦁 Animal, it has access to all of the attributes and methods defined in the 🦁 Animal class. For example, we can call myDog.eat() to make the dog eat, or myDog.makeSound() to make it make a sound.
 
@@ -179,6 +334,7 @@ Inheritance allows you to create classes that are more specific to your needs by
 
 
 # 🌟 Polymorphism in Object-Oriented Programming
+![Polymorphism in java - Pianalytix: Build Real-World Tech Projects](https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1024,h_427/https://pianalytix.com/wp-content/uploads/2020/11/Polymorphism-in-Java-1024x427.jpg)
 
 Polymorphism is another important concept in object-oriented programming. 🤝 It allows you to write code that can work with objects of multiple classes, as long as those classes share a common interface or base class.
 
@@ -191,8 +347,19 @@ Method overloading allows you to define multiple methods with the same name in a
 **java code**
 
 
-![](https://i.gyazo.com/8fd429871ff14969c285ecb5344c61bd.png)
+``` java
+public class Calculator {
+    // Method to add two integers
+    public int calculate(int a, int b) {
+        return a + b;
+    }
 
+    // Method to add two doubles
+    public double calculate(double a, double b) {
+        return a + b;
+    }
+}
+```
 
 Here, the `Calculator` class defines two methods with the same name, but with different parameter types. Depending on the type of data passed to the method, Java will automatically choose the correct method to call. 📞
 
@@ -204,14 +371,27 @@ For example, let's say we have a base class called `Animal` with a method called
 
 **java code**
 
-![](https://i.gyazo.com/170f7caf7b1b3c9a973acf85f251cfd3.png)
+``` java
+public class Animal {
+    public void makeSound() {
+        System.out.println("The animal makes a sound.");
+    }
+}
+```
 
 
 We can create a subclass called `Dog` that overrides the `makeSound()` method:
 
 **java code**
 
-![](https://i.gyazo.com/e908ff8ac26cac1a2ab37bf40a355db4.png)
+``` java
+public class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("The dog barks.");
+    }
+}
+```
 
 
 Here, the `Dog` class overrides the `makeSound()` method in the `Animal` class. When we call the `makeSound()` method on a `Dog` object, the overridden method in the `Dog` class will be called instead of the original method in the `Animal` class.
@@ -226,21 +406,53 @@ In Java, polymorphism is often achieved through the use of interfaces and inheri
 **java code**
 
 
-![](https://i.gyazo.com/c54518d4c25ab829ba192dda8fe647ac.png)
+``` java
+public interface Shape {
+    void draw();
+}
+```
 
 
 Now, we can create an array of Shape objects that contains both Circle and Square objects:
 
 **java code**
 
-![](https://i.gyazo.com/40c1b836731f1f3c70573a837c14f42a.png)
+``` java
+public class Circle implements Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle.");
+    }
+}
+```
+
+``` java
+public class Square implements Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing a square.");
+    }
+}
+```
 
 
 Because both Circle and Square inherit from Shape, we can call the draw() method on each object in the array using a for loop:
 
 **java code**
 
-![](https://i.gyazo.com/3570eeed57a1bedea30aae9b39f5b49d.png)
+``` java
+public class Main {
+    public static void main(String[] args) {
+        Shape[] shapes = new Shape[2];
+        shapes[0] = new Circle();
+        shapes[1] = new Square();
+
+        for (Shape shape : shapes) {
+            shape.draw();
+        }
+    }
+}
+```
 
 This code will call the draw() method on each object in the array, regardless of whether it's a Circle or a Square. This is an example of polymorphism, because we're treating objects of different classes as if they were objects of the same class (Shape).💻
 
