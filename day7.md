@@ -15,7 +15,19 @@ To read input from the keyboard, we can use the `Scanner` class in Java. Here's 
 **java code**
 
 
-![](https://i.gyazo.com/88da1250173e2eb0689a70d3f8c55fce.png)
+``` java
+import java.util.Scanner;
+
+public class ReadFromKeyboard {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String inputString = scanner.nextLine();
+        System.out.println("You entered: " + inputString);
+        scanner.close();
+    }
+}
+```
 
 
 
@@ -28,7 +40,30 @@ To read input from a file, we can use the `FileInputStream` and `BufferedReader`
 **java code**
 
 
-![](https://i.gyazo.com/b2a7602c4694087bf6ae65692740c701.png)
+``` java
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class ReadFromFile {
+    public static void main(String[] args) {
+        try {
+            File file = new File("input.txt");
+            FileInputStream fileInputStream = new FileInputStream(file);
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }
+            fileInputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 
 
@@ -42,7 +77,13 @@ To write output to the console, we can use the `System.out` object in Java. Here
 
 **java code**
 
-![](https://i.gyazo.com/ca2fa1b24311f16a026be99692a04800.png)
+``` java
+public class WriteToConsole {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
 
 
 In the above code, we use the `println()` method of the `System.out` object to write the output to the console.
@@ -54,7 +95,26 @@ To write output to a file, we can use the `FileOutputStream` and `PrintWriter` c
 **java code**
 
 
-![](https://i.gyazo.com/6cb3402e5c389a5ac975c378f5a9ebc6.png)
+``` java
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class WriteToFile {
+    public static void main(String[] args) {
+        try {
+            File file = new File("output.txt");
+            FileOutputStream fileOutputStream = new FileOutputStream(file);
+            PrintWriter printWriter = new PrintWriter(fileOutputStream);
+            printWriter.println("Hello, World!");
+            printWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 
 
@@ -81,7 +141,26 @@ To write text to a file in Java, we can use the `PrintWriter` class. Here is an 
 **java code**
 
 
-![](https://i.gyazo.com/95d267bd323adf7d3a2c21d17e4fd9e9.png)
+``` java
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class WriteTextToFile {
+    public static void main(String[] args) {
+        try {
+            File file = new File("output.txt");
+            FileWriter fileWriter = new FileWriter(file);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+            printWriter.println("Hello, World!");
+            printWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 
 
@@ -94,7 +173,25 @@ To write binary data to a file in Java, we can use the `FileOutputStream` class.
 **java code**
 
 
-![](https://i.gyazo.com/3fcb3ef0ce883ce1938d159385ae97e2.png)
+``` java
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class WriteBinaryToFile {
+    public static void main(String[] args) {
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream("data.bin");
+            DataOutputStream dataOutputStream = new DataOutputStream(fileOutputStream);
+            dataOutputStream.writeDouble(3.14159);
+            dataOutputStream.writeInt(42);
+            dataOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 
 
@@ -109,7 +206,29 @@ To read text from a file in Java, we can use the `BufferedReader` class. Here is
 **java code**
 
 
-![](https://i.gyazo.com/9ed8babef86c179143c9fb43d56542bf.png)
+``` java
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ReadTextFromFile {
+    public static void main(String[] args) {
+        try {
+            File file = new File("input.txt");
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }
+            bufferedReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 
 
@@ -122,7 +241,27 @@ To read binary data from a file in Java, we can use the `FileInputStream` class.
 **java code**
 
 
-![](https://i.gyazo.com/7f5c66f5752ec635e65168b0e401a45a.png)
+``` java
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class ReadBinaryFromFile {
+    public static void main(String[] args) {
+        try {
+            FileInputStream fileInputStream = new FileInputStream("data.bin");
+            DataInputStream dataInputStream = new DataInputStream(fileInputStream);
+            double doubleValue = dataInputStream.readDouble();
+            int intValue = dataInputStream.readInt();
+            dataInputStream.close();
+            System.out.println("Double Value: " + doubleValue);
+            System.out.println("Int Value: " + intValue);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
 
 
 In the above code, we create an instance of the `FileInputStream` class, and then wrap it with the `DataInputStream` class to read binary data using methods like `readDouble()` and `readInt()`.
@@ -134,7 +273,20 @@ To delete a file in Java, we can use the `File` class. Here is an example code:
 **java code**
 
 
-![](https://i.gyazo.com/473ddccfd98fabd62aa240ffbf3d503e.png)
+``` java
+import java.io.File;
+
+public class DeleteFile {
+    public static void main(String[] args) {
+        File file = new File("fileToDelete.txt");
+        if (file.delete()) {
+            System.out.println("File deleted successfully.");
+        } else {
+            System.out.println("Failed to delete the file.");
+        }
+    }
+}
+```
 
 
 
@@ -159,7 +311,24 @@ To read input from the console in Java, we can use the `Scanner` class. Here is 
 **java code**
 
 
-![](https://i.gyazo.com/e56effe568ba611af40fdcf6b40f031f.png)
+``` java
+import java.util.Scanner;
+
+public class ConsoleInputExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Please enter your age: ");
+        int age = scanner.nextInt();
+
+        System.out.println("Hello, " + name + ". You are " + age + " years old.");
+        scanner.close();
+    }
+}
+```
 
 
 In the above code, we create an instance of the `Scanner` class and use its `nextLine()` method to read a line of input from the console.
@@ -170,7 +339,13 @@ To write output to the console in Java, we can use the `System.out` object and i
 
 **java code**
 
-![](https://i.gyazo.com/1f21f405afdd387a075ce2a7ecff8f3a.png)
+``` java
+public class ConsoleOutputExample {
+    public static void main(String[] args) {
+        System.out.println("This is an example of writing output to the console.");
+    }
+}
+```
 
 
 In the above code, we use the `println()` method to print a line of text to the console, and use the `print()` method to print text without a newline character.
@@ -182,7 +357,21 @@ To combine console input and output in Java, we can use the `Scanner` class and 
 **java code**
 
 
-![](https://i.gyazo.com/aca78ba83d5c9d2b889f2257966ef25e.png)
+``` java
+import java.util.Scanner;
+
+public class CombinedConsoleIOExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please enter a number: ");
+        int number = scanner.nextInt();
+
+        System.out.println("You entered: " + number);
+        scanner.close();
+    }
+}
+```
 
 
 In the above code, we use both `Scanner` and `System.out` objects to read input and write output to the console.
@@ -192,6 +381,7 @@ In the above code, we use both `Scanner` and `System.out` objects to read input 
 In this article, we have explored different ways to perform Console I/O operations in Java, including reading input from the console, writing output to the console, and combining input and output operations. Console I/O is an essential part of many Java programs, and mastering it will make you a more efficient and effective Java developer.
 
 # 🤖 Interacting with Users through the Console in Java 🖥️ 🤝
+![Java IO Tutorial - GeeksforGeeks](https://media.geeksforgeeks.org/wp-content/uploads/20210909153027/JavaIOConsole.png)
 
 In Java, interacting with users through the console is a common way to take input and provide output in console-based applications. This article will explore different ways to interact with users through the console in Java, including taking input and providing output.
 
@@ -202,7 +392,21 @@ To take input from users through the console in Java, we can use the `Scanner` c
 **java code**
 
 
-![](https://i.gyazo.com/3232f683a38f7430f37cf337e9b51ba3.png)
+``` java
+import java.util.Scanner;
+
+public class InputExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Please enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Hello, " + name + "! Welcome to Java programming.");
+        scanner.close();
+    }
+}
+```
 
 
 
@@ -214,9 +418,13 @@ To provide output to users through the console in Java, we can use the `System.o
 
 **java code**
 
-![](https://i.gyazo.com/63bddc45908c03b393c6d7e6826fd4eb.png)
-
- 
+``` java
+public class OutputExample {
+    public static void main(String[] args) {
+        System.out.println("This is an example of providing output to users.");
+    }
+}
+```
 
 In the above code, we use the `println()` method to print a line of text to the console, and use the `print()` method to print text without a newline character.
 
@@ -226,8 +434,15 @@ We can add color to console output in Java by using ANSI escape codes. Here is a
 
 **java code**
 
-![](https://i.gyazo.com/fc2e5d85821c5c7f1014401a870faea0.png)
-
+``` java
+public class ConsoleColorExample {
+    public static void main(String[] args) {
+        System.out.println("\u001B[31mThis text is red.\u001B[0m");
+        System.out.println("\u001B[34mThis text is blue.\u001B[0m");
+        System.out.println("\u001B[33mThis text is yellow.\u001B[0m");
+    }
+}
+```
 
 
 In the above code, we use ANSI escape codes to add color to console output.
@@ -237,6 +452,7 @@ In the above code, we use ANSI escape codes to add color to console output.
 In this article, we have explored different ways to interact with users through the console in Java, including taking input and providing output. We also learned how to add color to console output using ANSI escape codes. Interacting with users through the console is an essential part of many Java programs, and mastering it will make you a more efficient and effective Java developer.
 
 # 🚀 Building Command-Line Programs in Java 🖥️ 🚀
+![Command-line arguments in C# with examples](https://www.includehelp.com/dot-net/images/command-line-argument-in-c-sharp.jpg)
 
 Command-line programs are an essential part of many software development workflows. In Java, building command-line programs can be accomplished using the `main()` method in a class. This article will explore how to build command-line programs in Java, including taking input and providing output, and how to package and distribute them.
 
@@ -246,7 +462,13 @@ In Java, a command-line program is started by invoking the `main()` method of a 
 
 **java code**
 
-![](https://i.gyazo.com/4f66b57e51a28ed0fea60eb1aa4a5d16.png)
+``` java
+public class MainMethodExample {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
 
 
 In the above code, we define a class with a `main()` method that simply prints "Hello, World!" to the console when invoked.
@@ -257,7 +479,17 @@ To take input from command-line arguments in Java, we can use the `args` paramet
 
 **java code**
 
-![](https://i.gyazo.com/41fafa059f476a6f3f67423f91a58e65.png)
+``` java
+public class CommandLineArgumentsExample {
+    public static void main(String[] args) {
+        if (args.length > 0) {
+            System.out.println("Hello, " + args[0] + "! Welcome to the program.");
+        } else {
+            System.out.println("Hello! Welcome to the program.");
+        }
+    }
+}
+```
 
 
 In the above code, we use the `args` parameter to check if there are any command-line arguments passed to the program. If there are, we use the first argument to personalize the output to the user.
@@ -268,9 +500,15 @@ To provide output to the command-line in Java, we can use the `System.out` objec
 
 **java code**
 
-![](https://i.gyazo.com/35cc39ac0f327a49b7458d12d8dc7484.png)
-
-` 
+``` java
+public class OutputToCommandLineExample {
+    public static void main(String[] args) {
+        for (String arg : args) {
+            System.out.println(arg);
+        }
+    }
+}
+```
 
 In the above code, we use a `for` loop to iterate through the `args` array and print each argument on a separate line.
 
@@ -281,9 +519,65 @@ To package and distribute a command-line program in Java, we can use a build too
 
 **xml code**
 
-![](https://i.gyazo.com/b1917554c37c8d2d1f41964269590aad.png)
+``` xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-![](https://i.gyazo.com/347fc68f8acceaad291b4fd54bda56fb.png)
+    <groupId>com.example</groupId>
+    <artifactId>my-command-line-program</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- Add your dependencies here -->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.example.MainClass</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+```
 
 
 
@@ -386,7 +680,14 @@ Choose the best answer from the options provided. Each question has only one cor
 
 **java code**
 
-![](https://i.gyazo.com/0d42862dc2c8f28cd537cae1f792f3a6.png)
+``` java
+public class Main {
+    public static void main(String[] args) {
+        int x = 123;
+        System.out.printf("%d", x);
+    }
+}
+```
 
 
 - a) `123` 
@@ -419,7 +720,24 @@ Choose the best answer from the options provided. Each question has only one cor
 **java code**
 
 
-![](https://i.gyazo.com/4bf3dcf285ebbeeeea8d9c807bbc4da8.png)
+``` java
+public class Main {
+    public static void main(String[] args) {
+        int a = 20;
+        a = increment(a);
+        a = add(a);
+        System.out.println(a);
+    }
+
+    public static int increment(int x) {
+        return x + 1;
+    }
+
+    public static int add(int y) {
+        return y + 2;
+    }
+}
+```
 
 
 - a) `20` 
